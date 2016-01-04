@@ -1,7 +1,7 @@
 # Schedule-me
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+This app allows freelancers and independent contractors to easily organize their client base and avoid scheduling conflicts.
+Clients will be able to access a calendar, which allows them to schedule services provided by the FL/IC.
 
 ## Prerequisites
 
