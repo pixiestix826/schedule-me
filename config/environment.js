@@ -6,6 +6,17 @@ module.exports = function(environment) {
     environment: environment,
     baseURL: '/',
     locationType: 'auto',
+
+    //jscs: disable
+    contentSecurityPolicy: {
+      'default-src': "'none'",
+      'script-src': "'self'",
+      'font-src': "'self' http://fonts.gstatic.com",
+      'connect-src': "'self'",
+      'img-src': "'self'",
+      'style-src': "'self' http://fonts.googleapis.com",
+      'media-src': "'self'"
+    },
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -22,6 +33,9 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV['ember-cli-mirage'] = {
+      enabled: false,
+    };
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
