@@ -1,1 +1,8 @@
-{{outlet}}
+
+{{#simple-form action 'save' onsubmit="saveData" as |formValues|}}
+  {{mdl-textfield label='First Name' value=firstName}}
+  {{mdl-textfield label='Last Name' value=lastName}}
+  {{mdl-textfield label='Email' value=email}}
+  {{mdl-textfield label='Address' value=address}}
+    <button class="login-submit-btn">Submit</button>
+{{/simple-form}}
