@@ -33,9 +33,9 @@
       <span class="services-list-item__description">{{serviceItem.description}}</span>
       <span class="services-list-item__price">{{serviceItem.price}}</span>
       <span class="services-list-item__time">{{serviceItem.time}}</span>
-    {{#link-to "service-item.edit" serviceItem class="services-list-item__edit"}}Edit{{/link-to}}
+    {{#link-to "admin.service-items.edit" serviceItem class="services-list-item__edit"}}Edit{{/link-to}}
     </li>
     {{/each}}
   </ul>
-  {{#link-to "service-items.new" class="new-btn"}}New Service{{/link-to}}
+  {{#link-to "admin.service-items.new" class="new-btn"}}New Service{{/link-to}}
 </div>

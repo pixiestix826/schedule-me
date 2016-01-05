@@ -2,6 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
+    apiHost: 'http://localhost:3000',
     modulePrefix: 'schedule-me',
     environment: environment,
     baseURL: '/',
