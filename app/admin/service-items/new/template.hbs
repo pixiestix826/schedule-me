@@ -5,6 +5,7 @@
   {{mdl-textfield value=formValues.price name="price" class="service-item__price" label="Price"}}
   {{mdl-textfield value=formValues.time name="timeAllotment" class="service-item__time" label="Time Allotment"}}
 
+{{#link-to 'admin.detail'}}
   {{mdl-button isRaised=true text='Add Service' isAccent=true}}
-
+{{/link-to}}
 {{/simple-form}}

@@ -1,24 +1,25 @@
-
-<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-  <thead>
-    <tr>
-      <th class="mdl-data-table__cell--non-numeric">Material</th>
-      <th>Quantity</th>
-      <th>Unit price</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <ul admin-detail>
-        <h2>Appointments</h2>
-        {{#each model as |appointment|}}
-          <li class="appointment-item">
-            <td>{{appointment.date}}</td>
-            <td class="mdl-data-table__cell--non-numeric">{{appointment.name}}</td>
-            <td>{{appointment.time}}</td>
-          </li>
-        {{/each}}>
-      </ul>
-    </tr>
-  </tbody>
-</table>
+<div class="appointment-table"><h2>Appointment Book</h2>
+  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+    <thead>
+      <tr>
+        <th class="mdl-data-table__cell--non-numeric">Material</th>
+        <th>Quantity</th>
+        <th>Unit price</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <ul admin-detail>
+          <h2>Appointments</h2>
+          {{#each model as |appointment|}}
+            <li class="appointment-item">
+              <td>{{appointment.date}}</td>
+              <td class="mdl-data-table__cell--non-numeric">{{appointment.name}}</td>
+              <td>{{appointment.time}}</td>
+            </li>
+          {{/each}}>
+        </ul>
+      </tr>
+    </tbody>
+  </table>
+</div>
