@@ -1,6 +1,6 @@
 {{#simple-form action 'authenticate' onsubmit="loginUser" as |formValues|}}
-  {{input value=formValues.username name="username" placeholder="Username"}}
-  {{input value=formValues.password name="password" placeholder="Password"}}
+  {{mdl-textfield value=formValues.username label="Username"}}
+  {{mdl-textfield value=formValues.password name="password" label="Password"}}
 
   <button class="login-submit-btn">Submit</button>
 {{/simple-form}}
