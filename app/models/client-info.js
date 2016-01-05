@@ -7,6 +7,4 @@ export default DS.Model.extend({
   email: DS.attr('string'),
   address: DS.attr('string'),
 
-  history: DS.hasMany('client-history'),
-
 });
