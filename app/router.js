@@ -10,12 +10,14 @@ Router.map(function() {
 
   this.route('admin', function() {
     this.route('login');
+    this.route('detail');
   });
 
   this.route('login');
   this.route('logout');
   this.route('client', function() {
   });
+  this.route('client.detail');
 });
 
 export default Router;
