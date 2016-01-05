@@ -18,7 +18,6 @@ Router.map(function() {
   this.route('client', function() {
     this.route('detail');
   });
-  this.route('client.detail');
 });
 
 export default Router;
