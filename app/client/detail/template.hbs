@@ -11,5 +11,9 @@
 
 
 <ul client-history><h2>Order History</h2>
-  <li>blah</li>
+{{#each model as |value|}}
+  <li class="client-history-items">
+    {{value.name}}
+  </li>
+{{/each}}
 </ul>
