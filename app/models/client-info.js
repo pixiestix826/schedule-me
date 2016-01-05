@@ -6,5 +6,6 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   email: DS.attr('string'),
   address: DS.attr('string'),
+  payment: DS.attr('string'),
 
 });

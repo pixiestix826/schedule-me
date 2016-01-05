@@ -1,1 +1,15 @@
-{{outlet}}
+{{#simple-form startingValues="model" as |formValues|}}
+  {{mdl-textfield value=formValues.name name="name" class="client-info__name" label=""}}
+  {{mdl-textfield value=formValues.address name="address" class="client-info__address" label=""}}
+  {{mdl-textfield value=formValues.email name="email" class="client-info__email" label=""}}
+  {{mdl-textfield value=formValues.payment name="paymentType" class="client-info__payment" label=""}}
+
+  {{mdl-button isRaised=true text='Edit' isAccent=true}}
+  {{mdl-button isRaised=true text='Save' isAccent=true}}
+
+{{/simple-form}}
+
+
+<ul client-history><h2>Order History</h2>
+  <li>blah</li>
+</ul>

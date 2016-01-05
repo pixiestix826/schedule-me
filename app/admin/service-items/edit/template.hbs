@@ -1,1 +1,10 @@
-{{outlet}}
+{{#simple-form startingValues="model" as |formValues|}}
+  {{mdl-textfield value=formValues.category name="category" class="service-item__category" label="Category"}}
+  {{mdl-textfield value=formValues.service name="serviceName" class="service-item__name" label="Service Name"}}
+  {{mdl-textfield value=formValues.description name="description" class="service-item__description" label="Service Description"}}
+  {{mdl-textfield value=formValues.price name="price" class="service-item__price" label="Price"}}
+  {{mdl-textfield value=formValues.time name="timeAllotment" class="service-item__time" label="Time Allotment"}}
+
+  {{mdl-button isRaised=true text='Edit Service' isAccent=true}}
+
+{{/simple-form}}
