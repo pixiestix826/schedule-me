@@ -13,7 +13,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com",
-      'connect-src': "'self'",
+      'connect-src': "'self' http://localhost:3000",
       'img-src': "'self'",
       'style-src': "'self' http://fonts.googleapis.com",
       'media-src': "'self'"

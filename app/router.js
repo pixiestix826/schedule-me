@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('client', function() {
     this.route('detail');
   });
+  this.route('register');
 });
 
 export default Router;
