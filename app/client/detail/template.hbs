@@ -1,3 +1,4 @@
+<h2>My Profile</h2>
 {{#simple-form as |formValues|}}
   {{mdl-textfield value=formValues.name name="name" class="client-info__name" label=""}}
   {{mdl-textfield value=formValues.address name="address" class="client-info__address" label=""}}
@@ -9,8 +10,12 @@
 
 {{/simple-form}}
 
+{{#link-to "appointment.calender"}}
+  {{mdl-button isRaised=true text='Make An Appointment' isAccent=true}}
+{{/link-to}}
 
-<ul client-history><h2>Order History</h2>
+<h2>Order History</h2>
+<ul client-history>
 {{#each model as |value|}}
   <li class="client-history-items">
     {{value.name}}

@@ -26,6 +26,10 @@ Router.map(function() {
   });
 
   this.route('register');
+
+  this.route('appointment', function() {
+    this.route('calender');
+  });
 });
 
 export default Router;
