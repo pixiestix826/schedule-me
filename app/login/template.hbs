@@ -1,4 +1,6 @@
-{{#simple-form action 'authenticate' onsubmit="loginUser" as |formValues|}}
+<h2>Login</h2>
+
+{{#simple-form onsubmit="loginUser" as |formValues|}}
   {{mdl-textfield value=formValues.username label="Username"}}
   {{mdl-textfield value=formValues.password type="password" label="Password"}}
 
