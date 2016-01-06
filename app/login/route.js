@@ -1,12 +1,11 @@
 import Ember from 'ember';
-import UnauthenticatedRouteMixin from 'ember-simple-auth/mixins/unauthenticated-route-mixin';
 
-export default Ember.Route.extend(UnauthenticatedRouteMixin, {
+export default Ember.Route.extend({
   session: Ember.inject.service(),
 
   actions: {
     loginUser(formValues) {
-      this.get('session').authenticate('authenticator:application', formValues.username, formValues.password)
+      this.get('session').authenticate('authenticator:login', formValues.username, formValues.password)
         .catch((reason) => {
           console.log(reason);
         });

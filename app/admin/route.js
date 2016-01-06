@@ -8,8 +8,9 @@ export default Ember.Route.extend(AuthenticatedRouteMixin, {
 
   beforeModel() {
     this._super(...arguments);
+
     return new RSVP.Promise((resolve, reject) => {
-      return this.get('sessionUser.user').then((user) => {
+      return this.get('currentUser.user').then((user) => {
         if (Ember.get(user, 'isAdmin')) {
           return resolve();
         }
