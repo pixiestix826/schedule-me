@@ -6,7 +6,7 @@ const Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('new-user');
+  this.route('register');
 
   this.route('admin', function() {
     this.route('login');
@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('client', function() {
     this.route('detail');
   });
+
   this.route('register');
 });
 

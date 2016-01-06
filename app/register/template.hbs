@@ -1,10 +1,13 @@
 {{#simple-form onsubmit="registerUser" as |user|}}
-  {{input value=user.email placeholder="Email"}}
-  {{input type="password" value=user.password placeholder="Password"}}
-  {{input type="password" value=user.password_confirmation placeholder="Password Confirmation"}}
+{{mdl-textfield label="First Name" value=user.firstName}}
+{{mdl-textfield label="Last Name" value=user.lastName}}
+{{mdl-textfield label="Email" value=user.email}}
+{{mdl-textfield label="Address" value=user.address}}
 
-  {{input value=user.firstName placeholder="First Name"}}
-  {{input value=user.lastName placeholder="Last Name"}}
+{{mdl-textfield type="password" label="Password" value=user.password}}
+{{mdl-textfield type="password" label="Password Confirmation" value=user.password_confirmation}}
 
-  <button>Submit</button>
+  {{mdl-button isRaised=true text="Submit" isAccent=true}}
+  {{mdl-radio value=1 text="Admin" name="admin"}}
+  {{mdl-radio value=1 text="Client" name="admin"}}
 {{/simple-form}}

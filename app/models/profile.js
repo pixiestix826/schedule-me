@@ -5,6 +5,7 @@ export default DS.Model.extend(IAm, {
   email: DS.attr(),
   firstName: DS.attr(),
   lastName: DS.attr(),
+  address: DS.attr(),
   roles: DS.attr(),
 
 });
