@@ -25,12 +25,12 @@
 
 <div class="services">
   <ul class="services-list">
-    {{#each model as |services|}}
+    {{#each model.services as |serviceItem|}}
     <li class="services-list-item">
-      <span class="services-list-item__category">{{serviceItem.category}}</span>
-      <span class="services-list-item__name">{{serviceItem.name}}</span>
-      <span class="services-list-item__description">{{serviceItem.description}}</span>
-      <span class="services-list-item__price">{{serviceItem.price}}</span>
+      <span class="services-list-item__category">{{serviceItem.category}} -</span>
+      <span class="services-list-item__name">{{serviceItem.name}} -</span>
+      <span class="services-list-item__description">{{serviceItem.description}} -</span>
+      <span class="services-list-item__price">{{serviceItem.price}} -</span>
       <span class="services-list-item__time">{{serviceItem.time}}</span>
     {{#link-to "admin.service-items.edit" serviceItem class="services-list-item__edit"}}Edit{{/link-to}}
     </li>

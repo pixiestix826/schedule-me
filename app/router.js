@@ -15,7 +15,7 @@ Router.map(function() {
     this.route('service-items', function() {
       this.route('new');
 
-      this.route('edit', {path: 'service-item_id'});
+      this.route('edit', {path: '/:service-item_id'});
     });
   });
 
