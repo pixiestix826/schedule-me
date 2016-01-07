@@ -10,5 +10,12 @@ export default Ember.Route.extend({
         this.transitionTo('admin.detail');
       });
     },
+
+    removeService(formValues) {
+      let service = this.modelFor(this.routeName);
+
+      service.destroyRecord(formValues);
+      this.transitionTo('admin.detail');
+    },
   },
 });
