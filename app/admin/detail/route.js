@@ -7,4 +7,12 @@ export default Ember.Route.extend({
       appointments: this.store.findAll('appointment-item'),
     });
   },
+
+  model: function() {
+    return {
+      events: Ember.A([{
+        title: 'Partayyyy', start: new Date(),
+      }, ])
+    };
+  },
 });

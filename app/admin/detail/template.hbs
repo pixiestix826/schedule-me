@@ -1,5 +1,5 @@
 <div class="appointment-book"><h2>Appointment Book</h2>
-  {{full-calendar events=events}}
+  {{full-calendar events=events eventClick=(action 'clicked')}}
         {{!-- <ul admin-detail>
           {{#each model as |appointment|}}
             <li class="appointment-item">
