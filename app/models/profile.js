@@ -6,6 +6,6 @@ export default DS.Model.extend(IAm, {
   firstName: DS.attr('string'),
   lastName: DS.attr('string'),
   address: DS.attr('string'),
-  roles: DS.attr('string'),
+  roles: DS.attr(),
 
 });
