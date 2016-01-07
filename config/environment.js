@@ -15,7 +15,7 @@ module.exports = function(environment) {
       'font-src': "'self' http://fonts.gstatic.com",
       'connect-src': "'self' http://localhost:3000",
       'img-src': "'self'",
-      'style-src': "'self' http://fonts.googleapis.com",
+      'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline'",
       'media-src': "'self'"
     },
     EmberENV: {
