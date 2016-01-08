@@ -1,5 +1,5 @@
 <div class="appointment-book"><h2>Appointment Book</h2>
-  {{as-calendar
+  {{!-- {{as-calendar
   title="Ember Calendar"
   occurrences=occurrences
   defaultTimeZoneQuery="New York|London|Dubai|Hong Kong"
@@ -8,8 +8,8 @@
   timeSlotDuration="00:30"
   onAddOccurrence=(action "calendarAddOccurrence")
   onUpdateOccurrence=(action "calendarUpdateOccurrence")
-  onRemoveOccurrence=(action "calendarRemoveOccurrence")}}
-        {{!-- <ul admin-detail>
+  onRemoveOccurrence=(action "calendarRemoveOccurrence")}} --}}
+        <ul admin-detail>
           {{#each model as |appointment|}}
             <li class="appointment-item">
               {{appointment.date}}
@@ -17,7 +17,7 @@
               {{appointment.time}}
             </li>
           {{/each}}
-        </ul> --}}
+        </ul>
 </div>
 
 <div class="services"><h2>Service List</h2>
