@@ -1,5 +1,6 @@
 {
   "predef": [
+    "Spinner",
     "server",
     "document",
     "window",

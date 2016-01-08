@@ -14,11 +14,18 @@
     "qunit": "~1.20.0",
     "material-design-lite": "~1.0.4",
     "pretender": "~0.10.1",
-    "lodash": "~3.7.0",
+    "lodash": "3.10.0",
     "Faker": "~3.0.0",
     "fullcalendar": "~2.6.0",
     "fullcalendar-scheduler": "~1.2.0",
     "moment": ">= 2.8.0 < 2.11.0",
-    "moment-timezone": ">= 0.1.0 <= 0.5.0"
+    "moment-timezone": ">= 0.1.0 <= 0.5.0",
+    "interact": "1.2.5",
+    "jquery-simulate": "1.0.1",
+    "paint": "0.9.5",
+    "modernizr": "2.8.3",
+    "spinjs": "2.0.2",
+    "tooltipster": "3.3.0",
+    "trackpad-scroll-emulator": "1.0.8"
   }
 }
