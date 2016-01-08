@@ -51,6 +51,8 @@
     "ember-simple-form": "0.1.0",
     "ember-truth-helpers": "1.2.0",
     "ember-with-service": "1.1.0",
-    "emberx-select": "2.0.2"
+    "ember-yoga-sass": "1.0.0",
+    "emberx-select": "2.0.2",
+    "yoga-sass": "1.0.0"
   }
 }
