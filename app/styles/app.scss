@@ -25,8 +25,8 @@ body {
   box-shadow: 0 8px 6px -6px black;
 }
 img {
-  width: 15rem;
-  height: 15rem;
+  width: 18rem;
+  height: 20rem;
 }
 
 .tag-line__header,
@@ -67,9 +67,14 @@ img {
     justify-content: center;
  }
 
- .submit-btn, .add-service__btn {
+ .submit-btn, .add-service__btn,
+ .register-submit-btn {
    float: right;
    margin: 5px;
+ }
+ .register-radio-btn {
+   float: left;
+   margin: 3px;
  }
 
  // Register Page Styles
