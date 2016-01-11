@@ -5,14 +5,19 @@
 
 <div class="client-page-history">
   <h2 class="client-page-headers">Order History</h2>
-  <ul client-history>
-  {{#each model as |value|}}
-    <li class="client-history-items">
-      {{value.name}}
-    </li>
-  {{/each}}
-  </ul>
-</div>
+    <ul class="client-history">
+      {{#each model.services as |clientHistory|}}
+      <li class="services-list-item">
+        <span class="services-list-item__category">{{serviceItem.category}} -</span>
+        <span class="services-list-item__name">{{serviceItem.service}} -</span>
+        <span class="services-list-item__description">{{serviceItem.description}} -</span>
+        <span class="services-list-item__price">${{serviceItem.price}} -</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+
+
 
 {{#link-to "appointment.calender"}}
   {{mdl-button class="appointment-btn" isRaised=true text='Make An Appointment' isAccent=true}}
