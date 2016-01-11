@@ -27,9 +27,11 @@
     looking for a way to organize your client
     database, calendar and offered services?
   </div>
-  {{#mdl-card-actions link-to 'admin.detail'}}
+{{#link-to 'admin.detail'}}
+  {{#mdl-card-actions}}
     {{mdl-button class="admin-btn" text='Admin'}}
   {{/mdl-card-actions}}
+{{/link-to}}
   {{#mdl-card-buttons}}
     {{mdl-button icon='share'}}
   {{/mdl-card-buttons}}
@@ -42,9 +44,11 @@
     having access to order history and access to their
     service provider's calendar
   </div>
-  {{#mdl-card-actions link-to 'client.detail'}}
+{{#link-to 'client.detail'}}
+  {{#mdl-card-actions}}
     {{mdl-button class="client-btn" text='Client'}}
   {{/mdl-card-actions}}
+{{/link-to}}
   {{#mdl-card-buttons}}
     {{mdl-button icon='share'}}
   {{/mdl-card-buttons}}
