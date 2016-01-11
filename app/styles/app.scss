@@ -30,12 +30,13 @@ img {
 
 .appointment-btn {
   display: block;
+  margin-top: 3rem;
+  width: 50%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
-.admin-btn, .client-btn {
-  top: 50%;
-  left: 50%;
-}
+ .admin-card, .client-card {
+   display: inline-block;
+   margin: 10px;
+ }

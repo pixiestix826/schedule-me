@@ -1,11 +1,11 @@
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
+<img src="../images/NEW-PIC.jpg" alt="" />
 <h2 class="tag-line__header">Scheduling Made Easy</h2>
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
 <p class="description-p">
   Schedule Me allows freelancers and independent contractors
   to easily manage their calendars and clients. It allows clients to schedule
@@ -17,11 +17,33 @@
 {{/link-to}}
 
 
-{{#link-to 'admin.detail'}}
-  {{mdl-button class="admin-btn" isRaised=true text='Admin' isAccent=true}}
-{{/link-to}}
+
+{{#mdl-card class="admin-card" title='Admin?'}}
+  <div class="mdl-card__supporting-text">
+    Are you a freelancer or independent contractor
+    looking for a way to organize your client
+    database, calendar and offered services?
+  </div>
+  {{#mdl-card-actions link-to 'admin.detail'}}
+    {{mdl-button class="admin-btn" text='Admin'}}
+  {{/mdl-card-actions}}
+  {{#mdl-card-buttons}}
+    {{mdl-button icon='share'}}
+  {{/mdl-card-buttons}}
+{{/mdl-card}}
 
 
-{{#link-to 'client.detail'}}
-  {{mdl-button class="client-btn" isRaised=true text='Client' isAccent=true}}
-{{/link-to}}
+
+{{#mdl-card class="client-card" title='Client?'}}
+  <div class="mdl-card__supporting-text">
+    Client can create and maintain their account while
+    having access to order history and access to their
+    service provider's calendar
+  </div>
+  {{#mdl-card-actions link-to='client.detail'}}
+    {{mdl-button class="client-btn" text='Client'}}
+  {{/mdl-card-actions}}
+  {{#mdl-card-buttons}}
+    {{mdl-button icon='share'}}
+  {{/mdl-card-buttons}}
+{{/mdl-card}}
