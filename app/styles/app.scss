@@ -22,6 +22,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
+  box-shadow: 0 8px 6px -6px black;
 }
 img {
   width: 15rem;
@@ -45,6 +46,7 @@ img {
   display: block;
   margin-top: 3rem;
   width: 50%;
+  height: 4rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -52,7 +54,7 @@ img {
 
 .card-row {
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 }
  .admin-card, .client-card {
    margin: 10px;
