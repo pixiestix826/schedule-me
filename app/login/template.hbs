@@ -1,17 +1,17 @@
-<h2 class="main-page__header">Scheduling Made Easy</h2>
-<p>
+<h2 class="tag-line__header">Scheduling Made Easy</h2>
+<p class="description-p">
   Schedule Me allows freelancers and independent contractors
   to easily manage their calendars and clients. It allows clients to schedule
   appointments based on available dates and times.
 </p>
 
 {{#simple-form onsubmit="loginUser" as |formValues|}}
-  {{mdl-textfield value=formValues.username label="Username"}}
+  {{mdl-textfield value=formValues.username label="Email"}}
   {{mdl-textfield value=formValues.password type="password" label="Password"}}
 
   {{mdl-button isRaised=true text='Submit' isAccent=true}}
 {{/simple-form}}
 
-<p>
+<p class="login-page__register">
   Don't have an account? <a href="register">Sign Up</a>
 </p>

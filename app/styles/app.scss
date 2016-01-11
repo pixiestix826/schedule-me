@@ -1,2 +1,41 @@
 @import "yoga";
 @import 'material-design-lite';
+
+.mdl-layout__header {
+  background: #919195;
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+  background: #3fe5fb;
+}
+a {
+  color: #3fe5fb;
+}
+img {
+  width: 200px;
+}
+
+.tag-line__header,
+.description-p,
+.login-page__register {
+  text-align: center;
+}
+
+.mdl-textfield {
+  display: block;
+  background: #919195;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.appointment-btn {
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.admin-btn, .client-btn {
+  top: 50%;
+  left: 50%;
+}
