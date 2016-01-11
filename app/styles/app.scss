@@ -2,7 +2,7 @@
 @import 'material-design-lite';
 
 .mdl-layout__header {
-  background: #919195;
+  background: #3fe5fb;
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
@@ -13,7 +13,11 @@ a {
 }
 
 body {
-  background: #79797d;
+  background-image:
+    linear-gradient(
+      to bottom,
+      #79797d, white
+    );
 }
 
 //Index page styles
