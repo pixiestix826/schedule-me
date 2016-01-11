@@ -12,11 +12,16 @@ a {
   color: #3fe5fb;
 }
 
+body {
+  background: #79797d;
+}
+
 //Index page styles
 
 .image-row {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  width: 100%;
 }
 img {
   width: 15rem;
