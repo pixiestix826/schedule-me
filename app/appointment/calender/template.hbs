@@ -1,1 +1,20 @@
-{{outlet}}
+{{#mdl-card class="services" title='Select a Service'}}
+  <div class="mdl-card__supporting-text">
+    <ul class="services-list">
+      {{#each model.services as |serviceItem|}}
+    {{mdl-radio class="appointment-service-selector" value=1 text='' name='abc'}}
+      <li class="services-list-item">
+
+        <span class="services-list-item__name">{{serviceItem.service}}-</span>
+        <span class="services-list-item__description">{{serviceItem.description}}-</span>
+        <span class="services-list-item__price">${{serviceItem.price}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+{{#link-to "client.detail" class="new-btn"}}
+  {{#mdl-card-actions}}
+    {{mdl-button text='Add To Calendar'}}
+  {{/mdl-card-actions}}
+{{/link-to}}
+{{/mdl-card}}

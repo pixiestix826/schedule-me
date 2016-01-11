@@ -12,6 +12,15 @@ a {
   color: #3fe5fb;
 }
 
+li {
+  list-style-type: none;
+  margin-left: 20px;
+  line-height: 15px;
+}
+
+.mdl-radio.is-upgraded {
+  padding-left: 0;
+}
 
 body {
   background-image:
@@ -92,4 +101,10 @@ body {
 
 .client-page-headers {
   text-align: center;
+}
+
+// Appointment Page Styles
+
+.appointment-service-selector {
+  margin-right: 10px;
 }
