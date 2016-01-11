@@ -5,13 +5,14 @@
   appointments based on available dates and times.
 </p>
 
+<div class="login-page__form">
 {{#simple-form onsubmit="loginUser" as |formValues|}}
   {{mdl-textfield value=formValues.username label="Email"}}
   {{mdl-textfield value=formValues.password type="password" label="Password"}}
 
-  {{mdl-button isRaised=true text='Submit' isAccent=true}}
+  {{mdl-button class="submit-btn" isRaised=true text='Submit' isAccent=true}}
 {{/simple-form}}
-
+</div>
 <p class="login-page__register">
   Don't have an account? <a href="register">Sign Up</a>
 </p>

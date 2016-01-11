@@ -1,10 +1,11 @@
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
-<img src="../images/NEW-PIC.jpg" alt="" />
+<div class="image-row">
+  <img src="../images/NEW-PIC.jpg" alt="" />
+  <img src="../images/NEW-PIC.jpg" alt="" />
+  <img src="../images/NEW-PIC.jpg" alt="" />
+  <img src="../images/NEW-PIC.jpg" alt="" />
+  <img src="../images/NEW-PIC.jpg" alt="" />
+  <img src="../images/NEW-PIC.jpg" alt="" />
+</div>
 <h2 class="tag-line__header">Scheduling Made Easy</h2>
 <p class="description-p">
   Schedule Me allows freelancers and independent contractors
@@ -17,6 +18,7 @@
 {{/link-to}}
 
 
+<div class="card-row">
 
 {{#mdl-card class="admin-card" title='Admin?'}}
   <div class="mdl-card__supporting-text">
@@ -33,17 +35,18 @@
 {{/mdl-card}}
 
 
-
 {{#mdl-card class="client-card" title='Client?'}}
   <div class="mdl-card__supporting-text">
     Client can create and maintain their account while
     having access to order history and access to their
     service provider's calendar
   </div>
-  {{#mdl-card-actions link-to='client.detail'}}
+  {{#mdl-card-actions link-to 'client.detail'}}
     {{mdl-button class="client-btn" text='Client'}}
   {{/mdl-card-actions}}
   {{#mdl-card-buttons}}
     {{mdl-button icon='share'}}
   {{/mdl-card-buttons}}
 {{/mdl-card}}
+
+</div>

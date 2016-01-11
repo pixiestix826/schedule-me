@@ -11,8 +11,16 @@
 a {
   color: #3fe5fb;
 }
+
+//Index page styles
+
+.image-row {
+  display: flex;
+  justify-content: space-between;
+}
 img {
-  width: 200px;
+  width: 15rem;
+  height: 15rem;
 }
 
 .tag-line__header,
@@ -36,7 +44,23 @@ img {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+.card-row {
+  display: flex;
+  justify-content: space-around;
+}
  .admin-card, .client-card {
-   display: inline-block;
    margin: 10px;
+ }
+
+ // Login Page Styles
+
+ .login-page__form {
+    display: flex;
+    justify-content: center;
+ }
+
+ .submit-btn {
+   float: right;
+   margin: 5px;
  }
