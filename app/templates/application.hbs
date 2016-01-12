@@ -5,4 +5,14 @@
   {{mdl-nav-item name='Home' route='index'}}
 <div class="image-row"></div>
   {{outlet}}
+{{#mdl-mini-footer title='Schedule Me'}}
+  {{#mdl-footer-linklist}}
+    {{#link-to 'index' tagName='li'}}
+      Home
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+      Privacy
+    {{/link-to}}
+  {{/mdl-footer-linklist}}
+{{/mdl-mini-footer}}
 {{/mdl-nav}}
