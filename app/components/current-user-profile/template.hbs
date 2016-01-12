@@ -1,10 +1,10 @@
 <div class="user-profile-form">
 {{#simple-form startingValues=profile onsubmit="save" as |formValues|}}
-  {{mdl-textfield value=formValues.firstName class="client-info__first-name" label="First Name"}}
-  {{mdl-textfield value=formValues.lastName class="client-info__last-name" label="Last Name"}}
-  {{mdl-textfield value=formValues.address class="client-info__address" label="Address"}}
-  {{mdl-textfield value=formValues.email class="client-info__email" label="Email"}}
-  {{mdl-textfield value=formValues.payment class="client-info__payment" label="Payment Type"}}
+  {{mdl-textfield value=formValues.firstName class="client-info__first-name"}}
+  {{mdl-textfield value=formValues.lastName class="client-info__last-name"}}
+  {{mdl-textfield value=formValues.address class="client-info__address"}}
+  {{mdl-textfield value=formValues.email class="client-info__email"}}
+  {{mdl-textfield value=formValues.payment class="client-info__payment"}}
 
   {{mdl-button class="save-form-btn" isRaised=true text='Save' isAccent=true}}
 {{/simple-form}}

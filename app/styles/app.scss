@@ -37,7 +37,7 @@ body {
     );
 }
 
-h2 {
+.mdl-card__title-text {
   color: rgb(66,66,66);
 }
 
@@ -113,6 +113,12 @@ h2 {
 .client-page-headers {
   text-align: center;
 }
+
+.client-page-profile, .client-page-history {
+  margin: 10px;
+  width: 50%;
+}
+
 
 // Appointment Page Styles
 
