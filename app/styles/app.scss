@@ -1,8 +1,17 @@
+@import '../../bower_components/paint/paint';
+@import 'addons/ember-calendar/main';
 @import "yoga";
 @import 'material-design-lite';
 
-@import 'addon';
+.my-calendar {
+  width: 80%;
+  margin: auto;
 
+  li {
+    margin-left: 0;
+    line-height: inherit;
+  }
+}
 .mdl-layout__header {
   background: #3fe5fb;
 }

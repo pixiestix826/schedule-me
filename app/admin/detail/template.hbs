@@ -1,27 +1,4 @@
-<div class="appointment-table"><h2>Appointment Book</h2>
-  <table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
-    <thead>
-      <tr>
-        <th class="mdl-data-table__cell--non-numeric">Date</th>
-        <th>Client Name</th>
-        <th>Time</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <ul admin-detail>
-          {{#each model as |appointment|}}
-            <li class="appointment-item">
-              <td>{{appointment.date}}</td>
-              <td class="mdl-data-table__cell--non-numeric">{{appointment.name}}</td>
-              <td>{{appointment.time}}</td>
-            </li>
-          {{/each}}
-        </ul>
-      </tr>
-    </tbody>
-  </table>
-</div>
+<div class="appointment-table"><h2>Appointment Book</h2></div>
 
 
 {{#mdl-card class="services" title='Services List'}}

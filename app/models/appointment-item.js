@@ -1,8 +1,7 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-  date: DS.attr('date'),
+  startTime: DS.attr('moment-utc'),
+  service: DS.belongsTo('service-item'),
   name: DS.attr('string'),
-  time: DS.attr('string'),
-
 });

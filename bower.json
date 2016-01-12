@@ -23,7 +23,8 @@
     "modernizr": "2.8.3",
     "spinjs": "2.0.2",
     "tooltipster": "3.3.0",
-    "trackpad-scroll-emulator": "1.0.8"
+    "trackpad-scroll-emulator": "1.0.8",
+    "ember-cli-moment-shim": "~0.6.2"
   },
   "resolutions": {
     "ember": "^2.2.0",
