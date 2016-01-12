@@ -1,3 +1,4 @@
+{{#mdl-card class="new-service-card" itle='My card'}}
 <div class="new-service__form">
   {{#simple-form onsubmit="addService" as |formValues|}}
     {{mdl-textfield value=formValues.category name="category" class="service-item__category" label="Category"}}
@@ -8,3 +9,4 @@
     {{mdl-button class="add-service__btn" isRaised=true text='Add Service' isAccent=true}}
   {{/simple-form}}
 </div>
+{{/mdl-card}}

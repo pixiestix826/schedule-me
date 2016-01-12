@@ -3,7 +3,7 @@
 @import "yoga";
 @import 'material-design-lite';
 
-.my-calendar {
+.appointment-table {
   width: 80%;
   margin: auto;
 
@@ -37,8 +37,9 @@ body {
     );
 }
 
-.mdl-card__title-text {
+.mdl-card__title-text, p, h2 {
   color: rgb(66,66,66);
+  font-weight: bold;
 }
 
 //Index page styles
@@ -89,7 +90,12 @@ body {
     display: flex;
     justify-content: center;
  }
-
+ .register-card, .new-service-card {
+   width: 60%;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+ }
  .submit-btn, .add-service__btn,
  .register-submit-btn, .save-form-btn {
    float: right;
