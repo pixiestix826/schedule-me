@@ -6,11 +6,13 @@ export default Ember.Component.extend({
     let appointments = this.get('appointments');
 
     let occurrences = appointments.map(function(appointment) {
+      let length = appointment.get('length') || appointment.get('service.time');
+
       return {
         id: appointment.get('id'),
         startsAt: appointment.get('startTime'),
-        endsAt: moment(appointment.get('startTime')).add(60, 'minute'),
-        title: 'Foo',
+        endsAt: moment(appointment.get('startTime')).add(length, 'minute'),
+        title: appointment.get('service.service'),
       };
     });
 
@@ -20,7 +22,13 @@ export default Ember.Component.extend({
   },
 
   actions: {
-    calendarAddOccurrence: function(occurrence) {
+    calendarAddOccurrence: function({startsAt, endsAt}) {
+      let startTime = moment(startsAt);
+
+      this.get('store').createRecord('appointment-item', {
+
+      });
+
       // this.get('occurrences').pushObject(Ember.Object.create({
       //   title: occurrence.get('title'),
       //   startsAt: occurrence.get('startsAt'),
