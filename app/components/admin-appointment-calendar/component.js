@@ -29,19 +29,20 @@ export default Ember.Component.extend({
 
       });
 
-      // this.get('occurrences').pushObject(Ember.Object.create({
-      //   title: occurrence.get('title'),
-      //   startsAt: occurrence.get('startsAt'),
-      //   endsAt: occurrence.get('endsAt')
-      // }));
+      let adminBreak = window.prompt(`What's the title of your break?`, `Break Time`);
+      this.get('occurrences').pushObject(Ember.Object.create({
+        title: occurrence.get('title'),
+        startsAt: occurrence.get('startsAt'),
+        endsAt: occurrence.get('endsAt')
+      }));
     },
 
     calendarUpdateOccurrence: function(occurrence, properties) {
-      // occurrence.setProperties(properties);
+      occurrence.setProperties(properties);
     },
 
     calendarRemoveOccurrence: function(occurrence) {
-      // this.get('occurrences').removeObject(occurrence);
+      this.get('occurrences').removeObject(occurrence);
     }
   }
 });
