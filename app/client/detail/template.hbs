@@ -9,12 +9,11 @@
 {{#mdl-card class="client-page-history" title='Order History'}}
 <div>
     <ul class="client-history">
-      {{#each model.services as |clientHistory|}}
+      {{#each model.history as |clientHistory|}}
       <li class="services-list-item">
-        <span class="services-list-item__category">{{serviceItem.category}} -</span>
-        <span class="services-list-item__name">{{serviceItem.service}} -</span>
-        <span class="services-list-item__description">{{serviceItem.description}} -</span>
-        <span class="services-list-item__price">${{serviceItem.price}} -</span>
+        <span class="history-list-item__date">{{clientHistory.date}} -</span>
+        <span class="history-list-item__service">{{clientHistory.service}} -</span>
+        <span class="history-list-item__price">${{clientHistory.price}} -</span>
       </li>
       {{/each}}
     </ul>

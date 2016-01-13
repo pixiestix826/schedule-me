@@ -41,21 +41,19 @@ export default Ember.Component.extend({
     },
 
     calendarUpdateOccurrence: function({occurrence, properties}) {
-      // return this.store.find('occurrence');
       let confirm = window.prompt(`Are you sure you want to change this appointment?`, `Yes`);
-      this.get('store').findRecord('appointment-item', {
-        title,
-        startTime,
-        length,
-      });
+      this.store.find('occurrence');
 
-      occurrence.setProperties(formValues).then(() => {
-        this.transitionTo('occurrence');
+      occurrence.setProperties(properties).then(() => {
+        this.transitionTo('appointment.calender');
       });
     },
 
     calendarRemoveOccurrence: function(occurrence) {
       this.get('occurrences').removeObject(occurrence);
+      this.save().then(() => {
+        this.transitionTo('index');
+      });
     },
   },
 });
