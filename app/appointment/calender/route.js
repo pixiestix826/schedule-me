@@ -13,7 +13,7 @@ export default Ember.Route.extend({
       let appointment = this.store.createRecord('appointment-item', formValues);
 
       appointment.save().then(() => {
-        this.transitionTo('index');
+        this.transitionTo('client.detail');
       });
     },
   },

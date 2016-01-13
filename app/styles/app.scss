@@ -3,6 +3,12 @@
 @import "yoga";
 @import 'material-design-lite';
 
+.occurrences {
+  h1 {
+    margin: 0;
+  }
+}
+
 .appointment-table {
   width: 80%;
   margin: auto;
