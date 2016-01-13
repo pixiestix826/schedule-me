@@ -16,6 +16,7 @@ export default Ember.Component.extend({
         startsAt: appointment.get('startTime'),
         endsAt: moment(appointment.get('startTime')).add(length, 'minute'),
         title: appointment.get('title') || appointment.get('service.service'),
+        model: appointment,
       };
     });
 
@@ -50,9 +51,8 @@ export default Ember.Component.extend({
     },
 
     calendarRemoveOccurrence: function(occurrence) {
-      this.get('occurrences').removeObject(occurrence);
-      this.save().then(() => {
-        this.transitionTo('index');
+      occurrence.model.destroyRecord().then(() => {
+        this.didReceiveAttrs();
       });
     },
   },
