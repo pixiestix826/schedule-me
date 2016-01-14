@@ -4,9 +4,17 @@ import moment from 'moment';
 export default Ember.Component.extend({
   store: Ember.inject.service('store'),
 
+  _appointments: [],
+
   didReceiveAttrs() {
     let appointments = this.get('appointments');
-    console.log('apts');
+
+    this.set('_appointments', appointments.toArray());
+    this.renderCalendar();
+  },
+
+  renderCalendar() {
+    let appointments = this.get('_appointments');
 
     let occurrences = appointments.map(function(appointment) {
       let length = appointment.get('length') || appointment.get('service.time');
@@ -37,7 +45,7 @@ export default Ember.Component.extend({
       });
 
       adminBreak.save().then(() => {
-        this.didReceiveAttrs();
+        this.renderCalendar();
       });
     },
 
@@ -47,17 +55,20 @@ export default Ember.Component.extend({
         occurrence.model.setProperties();
 
         occurrence.model.save().then(() => {
-          this.didReceiveAttrs();
+          this.renderCalendar();
         });
       }
     },
 
     calendarRemoveOccurrence: function(occurrence) {
       if (occurrence && occurrence.model) {
-        let confim = window.prompt(`Are you sure you want to delete this appointment`, `Yes`);
-        occurrence.model.destroyRecord().then(() => {
-          this.didReceiveAttrs();
-        });
+        if (window.confirm(`Are you sure you want to delete this appointment`)) {
+          this.get('_appointments').removeObject(occurrence.model);
+
+          occurrence.model.destroyRecord().then(() => {
+            this.renderCalendar();
+          });
+        }
       }
     },
   },

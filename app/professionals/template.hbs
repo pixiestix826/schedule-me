@@ -1,10 +1,12 @@
 {{#mdl-card class="professional" title='Pick Your Professional'}}
   <div class="mdl-card__supporting-text">
     <ul class="professionals-list">
-      {{#each model.professionals as |professional|}}
+      {{#each model as |professional|}}
       <li class="professionals-list-item">
         {{#link-to "professionals" class="new-btn"}}
-        <span class="professionals-list-item__name">{{professional.name}}</span>
+        {{gravatar-image class="gravatar-image" email=professional.email}}
+        <span class="professionals-list-item__name">{{professional.firstName}}</span>
+        <span class="professionals-list-item__name">{{professional.lastName}}</span>
         {{/link-to}}
       </li>
       {{/each}}
