@@ -41,19 +41,24 @@ export default Ember.Component.extend({
       });
     },
 
-    calendarUpdateOccurrence: function({occurrence, properties}) {
-      let confirm = window.prompt(`Are you sure you want to change this appointment?`, `Yes`);
-      this.store.find('occurrence');
+    calendarUpdateOccurrence: function(occurrence, properties) {
+      if (occurrence && occurrence.model) {
+        let confirm = window.prompt(`Are you sure you want to change this appointment?`, `Yes`);
+        occurrence.model.setProperties();
 
-      occurrence.setProperties(properties).then(() => {
-        this.transitionTo('appointment.calender');
-      });
+        occurrence.model.save().then(() => {
+          this.didReceiveAttrs();
+        });
+      }
     },
 
     calendarRemoveOccurrence: function(occurrence) {
-      occurrence.model.destroyRecord().then(() => {
-        this.didReceiveAttrs();
-      });
+      if (occurrence && occurrence.model) {
+        let confim = window.prompt(`Are you sure you want to delete this appointment`, `Yes`);
+        occurrence.model.destroyRecord().then(() => {
+          this.didReceiveAttrs();
+        });
+      }
     },
   },
 });
