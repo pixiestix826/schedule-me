@@ -10,10 +10,10 @@
 <div>
     <ul class="client-history">
       {{#each model.history as |clientHistory|}}
-      <li class="services-list-item">
+      <li class="history-list-item">
         <span class="history-list-item__date">{{clientHistory.date}} -</span>
         <span class="history-list-item__service">{{clientHistory.service}} -</span>
-        <span class="history-list-item__price">${{clientHistory.price}} -</span>
+        <span class="history-list-item__price">${{clientHistory.price}}</span>
       </li>
       {{/each}}
     </ul>
