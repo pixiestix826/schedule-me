@@ -2,7 +2,7 @@
 
 module.exports = function(environment) {
   var ENV = {
-    apiHost: 'http://localhost:3000',
+    apiHost: 'https://schedule-me-api.herokuapp.com',
     modulePrefix: 'schedule-me',
     environment: environment,
     baseURL: '/',
@@ -13,7 +13,7 @@ module.exports = function(environment) {
       'default-src': "'none'",
       'script-src': "'self'",
       'font-src': "'self' http://fonts.gstatic.com https://maxcdn.bootstrapcdn.com data:",
-      'connect-src': "'self' http://localhost:3000",
+      'connect-src': "'self' https://schedule-me-api.herokuapp.com",
       'img-src': "'self'",
       'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline' https://use.fonticons.com https://maxcdn.bootstrapcdn.com",
       'media-src': "'self'"
