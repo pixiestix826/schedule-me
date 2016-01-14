@@ -7,4 +7,5 @@ export default DS.Model.extend(IAm, {
   lastName: DS.attr('string'),
   address: DS.attr('string'),
   roles: DS.attr(),
+  clientAppointments: DS.hasMany('appointment-item'),
 });
