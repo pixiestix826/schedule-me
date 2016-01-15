@@ -10,11 +10,11 @@ export default Ember.Route.extend({
   },
 
   actions: {
-    bookService(service) {
-      this.store.createRecord('service-item', formValues);
+    createAppointment(formValues) {
+      let appointment = this.store.createRecord('appointment-item', formValues);
 
-      service.save().then(() => {
-        this.transitionTo('services.booking');
+      appointment.save().then(() => {
+        this.transitionTo('professionals.services.booking');
       });
     },
   },
