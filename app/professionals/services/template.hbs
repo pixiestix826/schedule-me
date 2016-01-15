@@ -1,3 +1,5 @@
+<h2>Select a Service</h2>
+
 {{#mdl-card class="services" title='Services'}}
   <div class="mdl-card__supporting-text">
     <ul class="services-list">
@@ -7,13 +9,9 @@
         <span class="services-list-item__name">{{serviceItem.service}} -</span>
         <span class="services-list-item__description">{{serviceItem.description}} -</span>
         <span class="services-list-item__price">${{serviceItem.price}}</span>
+        <button>Book this Service</button>
       </li>
       {{/each}}
     </ul>
   </div>
-{{#link-to "professionals.services.booking" class="new-btn"}}
-  {{#mdl-card-actions}}
-    {{mdl-button text='Book An Appointment'}}
-  {{/mdl-card-actions}}
-{{/link-to}}
 {{/mdl-card}}
