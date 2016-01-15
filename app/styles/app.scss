@@ -56,7 +56,8 @@ h3, h4 {
   font-family: 'Galindo', cursive;
 }
 
-p, {
+p, h3, h4,
+.tag-line__header {
   color: rgb(66,66,66);
   font-weight: bold;
   text-align: center;
@@ -113,6 +114,7 @@ p, {
  .register-form, .new-service__form {
     display: flex;
     justify-content: center;
+
  }
  .register-card, .new-service-card {
    width: 60%;
