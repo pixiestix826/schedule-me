@@ -1,7 +1,7 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
-  currentUser: Ember.inject.service('current-user'),
+  professionals: Ember.inject.service('professionals'),
 
   model() {
     return Ember.RSVP.hash({
