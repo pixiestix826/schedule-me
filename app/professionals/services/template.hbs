@@ -1,17 +1,26 @@
-<h2>Select a Service</h2>
 
-{{#mdl-card class="services" title='Services'}}
-  <div class="mdl-card__supporting-text">
-    <ul class="services-list">
-      {{#each model.services as |serviceItem|}}
-      <li class="services-list-item">
-        <span class="services-list-item__category">{{serviceItem.category}} -</span>
-        <span class="services-list-item__name">{{serviceItem.service}} -</span>
-        <span class="services-list-item__description">{{serviceItem.description}} -</span>
-        <span class="services-list-item__price">${{serviceItem.price}}</span>
-        <button>Book this Service</button>
-      </li>
-      {{/each}}
-    </ul>
-  </div>
-{{/mdl-card}}
+<div class="background-image">
+  {{#simple-form onsubmit="createAppointment" as |formValues|}}
+    {{#mdl-card class="services" title='Select a Service' }}
+      <div class="mdl-card__supporting-text">
+        <ul class="services-list">
+          {{#bind-value-action value=formValues.service as |bindService|}}
+            {{#each model.services as |serviceItem|}}
+              <li class="service-list-item">
+                {{#mdl-radio class="appointment-service-selector" action=bindService value=serviceItem text='' name='abc' }}
+                  <span class="services-list-item__name">{{serviceItem.service}}-</span>
+                  <span class="services-list-item__description">{{serviceItem.description}}-</span>
+                  <span class="services-list-item__price">${{serviceItem.price}}</span>
+                {{/mdl-radio}}
+              </li>
+            {{/each}}
+          {{/bind-value-action}}
+        </ul>
+      </div>
+      {{#mdl-card-actions}}
+        {{mdl-button text='Book Service'}}
+      {{/mdl-card-actions}}
+    {{/mdl-card}}
+  {{/simple-form}}
+
+</div>

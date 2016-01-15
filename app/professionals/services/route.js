@@ -8,4 +8,14 @@ export default Ember.Route.extend({
       services: this.store.findAll('service-item'),
     });
   },
+
+  actions: {
+    bookService(service) {
+      this.store.createRecord('service-item', formValues);
+
+      service.save().then(() => {
+        this.transitionTo('services.booking');
+      });
+    },
+  },
 });
