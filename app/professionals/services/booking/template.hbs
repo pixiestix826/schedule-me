@@ -1,7 +1,11 @@
-<div class="background-image">
-  {{#ember-calendar-table as |startTime endTime|}}
-  {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
-{{/ember-calendar-table}}
 
-</div>
+{{#mdl-card class="professional-booking-calendar" title='Select Appointment Date'}}
+  <div class="mdl-card__supporting-text">
+    {{#ember-calendar-table as |startTime endTime|}}
+      {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
+    {{/ember-calendar-table}}
+  </div>
+{{/mdl-card}}
+
+
 {{outlet}}
