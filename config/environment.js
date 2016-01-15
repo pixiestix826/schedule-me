@@ -12,9 +12,9 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self'",
-      'font-src': "'self' http://fonts.gstatic.com https://maxcdn.bootstrapcdn.com data:",
+      'font-src': "'self' http://fonts.gstatic.com https://maxcdn.bootstrapcdn.com data: https://fonts.gstatic.com",
       'connect-src': "'self' https://schedule-me-api.herokuapp.com",
-      'img-src': "'self'",
+      'img-src': "'self' www.gravatar.com",
       'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline' https://use.fonticons.com https://maxcdn.bootstrapcdn.com",
       'media-src': "'self'"
     },

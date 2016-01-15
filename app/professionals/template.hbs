@@ -2,6 +2,7 @@
 <h4 class="professionals-list-header">To see the services these professionals offer, please click on an image</h4>
 <ul class="professionals-list">
   {{#each model as |professional|}}
+    {{#if professional.isProfessional}}
     <li class="professionals-list-item">
       {{#link-to "professionals.services" class="new-btn" }}
         <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=professional.email}}</span>
@@ -10,5 +11,6 @@
         <span class="professionals-list-item__service">{{professional.specialty}}</span>
       {{/link-to}}
     </li>
+    {{/if}}
   {{/each}}
 </ul>

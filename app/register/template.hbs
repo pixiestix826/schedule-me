@@ -1,8 +1,7 @@
 {{#mdl-card class="register-card" title='New User Information' }}
   <div class="register-form">
     {{#simple-form onsubmit="registerUser" as |user|}}
-      {{mdl-switch class="register-radio-btn" value=user.isProfessional text="Are you a professional?" name="admin"}}
-
+      {{mdl-switch class="register-switch" value=user.isProfessional text="Are you a professional?" name="admin"}}
       {{mdl-textfield label="First Name" value=user.firstName}}
       {{mdl-textfield label="Last Name" value=user.lastName}}
       {{mdl-textfield label="Email" value=user.email}}
@@ -14,7 +13,9 @@
         {{mdl-textfield label="Specialty" value=user.specialty}}
       {{/liquid-if}}
 
-      {{mdl-button class="register-submit-btn" isRaised=true text="Submit" isAccent=true}}
+      {{#link-to "/"}}
+        {{mdl-button class="register-submit-btn" isRaised=true text="Submit" isAccent=true}}
+      {{/link-to}}
     {{/simple-form}}
   </div>
 {{/mdl-card}}
