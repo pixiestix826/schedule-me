@@ -4,9 +4,14 @@ export default Ember.Route.extend({
   session: Ember.inject.service(),
   actions: {
     registerUser(formValues) {
-      let {email, password} = formValues;
+      let {
+        email, password, isProfessional,
+      } = formValues;
       let userData = Ember.getProperties(formValues, ['firstName', 'lastName', 'phone', 'specialty']);
-      userData.roles = ['admin'];
+      if (isProfessional) {
+
+        userData.roles = ['admin'];
+      }
 
       this.get('session').authenticate('authenticator:register', email, password, userData).catch((reason) => {});
     },

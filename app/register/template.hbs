@@ -1,9 +1,20 @@
 {{#mdl-card class="register-card" title='New User Information' }}
   <div class="register-form">
     {{#simple-form onsubmit="registerUser" as |user|}}
-      {{mdl-textfield label="First Name" value=user.firstName}} {{mdl-textfield label="Last Name" value=user.lastName}} {{mdl-textfield label="Email" value=user.email}} {{mdl-textfield label="Address" value=user.address}} {{mdl-textfield type="password" label="Password"
-      value=user.password}} {{mdl-textfield type="password" label="Password Confirmation" value=user.password_confirmation}} {{mdl-button class="register-submit-btn" isRaised=true text="Submit" isAccent=true}} {{mdl-radio class="register-radio-btn" value=1
-      text="Admin" name="admin"}} {{mdl-radio class="register-radio-btn" value=1 text="Client" name="client"}}
+      {{mdl-switch class="register-radio-btn" value=user.isProfessional text="Are you a professional?" name="admin"}}
+
+      {{mdl-textfield label="First Name" value=user.firstName}}
+      {{mdl-textfield label="Last Name" value=user.lastName}}
+      {{mdl-textfield label="Email" value=user.email}}
+      {{mdl-textfield label="Phone" value=user.phone}}
+      {{mdl-textfield type="password" label="Password"value=user.password}}
+      {{mdl-textfield type="password" label="Password Confirmation" value=user.password_confirmation}}
+
+      {{#liquid-if user.isProfessional}}
+        {{mdl-textfield label="Specialty" value=user.specialty}}
+      {{/liquid-if}}
+
+      {{mdl-button class="register-submit-btn" isRaised=true text="Submit" isAccent=true}}
     {{/simple-form}}
   </div>
 {{/mdl-card}}

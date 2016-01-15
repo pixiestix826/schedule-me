@@ -30,7 +30,12 @@ Router.map(function() {
   this.route('appointment', function() {
     this.route('calender');
   });
-  this.route('professionals');
+
+  this.route('professionals', function() {
+    this.route('services', {path: '/:professional-id'}, function() {
+      this.route('booking', {path: '/:service-item-id'});
+    });
+  });
 });
 
 export default Router;
