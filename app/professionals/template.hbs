@@ -5,6 +5,9 @@
       <li class="professionals-list-item">
         {{#link-to "professionals" class="new-btn"}}
         <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=professional.email}}</span>
+        <span class="professionals-list-item__name">{{professional.firstName}}</span>
+        <span class="professionals-list-item__name">{{professional.lastName}} - </span>
+        <span class="professionals-list-item__service">Developer</span>
         {{/link-to}}
       </li>
       {{/each}}

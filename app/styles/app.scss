@@ -13,6 +13,8 @@
   overflow: hidden;
   width: 80%;
   margin: auto;
+  margin-top: 20px;
+  border: 8px solid rgba(66, 66, 66, 0.86);
 
   li {
     margin-left: 0;
@@ -50,13 +52,14 @@ body {
 }
 
 .mdl-card__title-text, h2,
-h3, h4 {
+h3, h4, .as-calendar-header h1,
+.mdl-layout-title {
   font-weight: bold;
   // font-family: 'Londrina Shadow', cursive;
   font-family: 'Galindo', cursive;
 }
 
-p, h3, h4,
+p, h3, h4, .as-calendar-header h1,
 .tag-line__header {
   color: rgb(66,66,66);
   font-weight: bold;
