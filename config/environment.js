@@ -12,10 +12,10 @@ module.exports = function(environment) {
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self'",
-      'font-src': "'self' http://fonts.gstatic.com https://maxcdn.bootstrapcdn.com data: https://fonts.gstatic.com",
+      'font-src': "'self' http://fonts.gstatic.com https://maxcdn.bootstrapcdn.com data: https://fonts.gstatic.com https://fonts.googleapis.com/cssfamily=Galindo",
       'connect-src': "'self' https://schedule-me-api.herokuapp.com",
       'img-src': "'self' www.gravatar.com",
-      'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline' https://use.fonticons.com https://maxcdn.bootstrapcdn.com",
+      'style-src': "'self' http://fonts.googleapis.com 'unsafe-inline' https://use.fonticons.com https://maxcdn.bootstrapcdn.com https://fonts.googleapis.com",
       'media-src': "'self'"
     },
     EmberENV: {
