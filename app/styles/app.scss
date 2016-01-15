@@ -23,6 +23,12 @@
 }
 .mdl-layout__header {
   background: #36aab9;
+
+  background-image:
+    linear-gradient(
+      to bottom,
+      #36aab9, white
+    );
 }
 
 .mdl-button__ripple-container {
