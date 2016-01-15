@@ -1,33 +1,36 @@
-{{#simple-form onsubmit="createAppointment" as |formValues|}}
-  {{#mdl-card class="services" title='Select a Service' }}
-    <div class="mdl-card__supporting-text">
-      <ul class="services-list">
-        {{#bind-value-action value=formValues.service as |bindService|}}
-          {{#each model.services as |serviceItem|}}
-            <li class="service-list-item">
-              {{#mdl-radio class="appointment-service-selector" action=bindService value=serviceItem text='' name='abc' }}
-                <span class="services-list-item__name">{{serviceItem.service}}-</span>
-                <span class="services-list-item__description">{{serviceItem.description}}-</span>
-                <span class="services-list-item__price">${{serviceItem.price}}</span>
-              {{/mdl-radio}}
-            </li>
-          {{/each}}
-        {{/bind-value-action}}
-      </ul>
-    </div>
+<div class="background-image">
+  {{#simple-form onsubmit="createAppointment" as |formValues|}}
+    {{#mdl-card class="services" title='Select a Service' }}
+      <div class="mdl-card__supporting-text">
+        <ul class="services-list">
+          {{#bind-value-action value=formValues.service as |bindService|}}
+            {{#each model.services as |serviceItem|}}
+              <li class="service-list-item">
+                {{#mdl-radio class="appointment-service-selector" action=bindService value=serviceItem text='' name='abc' }}
+                  <span class="services-list-item__name">{{serviceItem.service}}-</span>
+                  <span class="services-list-item__description">{{serviceItem.description}}-</span>
+                  <span class="services-list-item__price">${{serviceItem.price}}</span>
+                {{/mdl-radio}}
+              </li>
+            {{/each}}
+          {{/bind-value-action}}
+        </ul>
+      </div>
 
-    <label>
-      {{#pikaday-with-time startValue=startDate binding=formValues.startTime as |date time|}}
-        <div class="mdl-textfield mdl-js-textfield">
-          {{pikaday-input class="mdl-textfield__input" value=date}}
-        </div>
+      <label>
+        {{#pikaday-with-time startValue=startDate binding=formValues.startTime as |date time|}}
+          <div class="mdl-textfield mdl-js-textfield">
+            {{pikaday-input class="mdl-textfield__input" value=date}}
+          </div>
 
-        {{mdl-textfield type="time" value=time}}
-      {{/pikaday-with-time}}
-    </label>
+          {{mdl-textfield type="time" value=time}}
+        {{/pikaday-with-time}}
+      </label>
 
-    {{#mdl-card-actions}}
-      {{mdl-button text='Add To Calendar'}}
-    {{/mdl-card-actions}}
-  {{/mdl-card}}
-{{/simple-form}}
+      {{#mdl-card-actions}}
+        {{mdl-button text='Add To Calendar'}}
+      {{/mdl-card-actions}}
+    {{/mdl-card}}
+  {{/simple-form}}
+
+</div>
