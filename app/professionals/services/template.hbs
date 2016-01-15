@@ -1,1 +1,19 @@
-{{outlet}}
+{{#mdl-card class="services" title='Services'}}
+  <div class="mdl-card__supporting-text">
+    <ul class="services-list">
+      {{#each model.services as |serviceItem|}}
+      <li class="services-list-item">
+        <span class="services-list-item__category">{{serviceItem.category}} -</span>
+        <span class="services-list-item__name">{{serviceItem.service}} -</span>
+        <span class="services-list-item__description">{{serviceItem.description}} -</span>
+        <span class="services-list-item__price">${{serviceItem.price}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+{{#link-to "professionals.services.booking" class="new-btn"}}
+  {{#mdl-card-actions}}
+    {{mdl-button text='Book An Appointment'}}
+  {{/mdl-card-actions}}
+{{/link-to}}
+{{/mdl-card}}
