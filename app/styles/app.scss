@@ -20,7 +20,7 @@
   }
 }
 .mdl-layout__header {
-  background: #3fe5fb;
+  background: #36aab9;
 }
 
 .mdl-button__ripple-container {
@@ -28,10 +28,10 @@
 }
 
 .mdl-button--accent.mdl-button--accent.mdl-button--raised {
-  background: #3fe5fb;
+  background: #36aab9;
 }
 a, .mdl-card__title-text {
-  color: #3fe5fb;
+  color: #36aab9;
 }
 
 
@@ -59,6 +59,7 @@ h3, h4 {
 p, {
   color: rgb(66,66,66);
   font-weight: bold;
+  text-align: center;
 }
 //Index page styles
 
@@ -97,10 +98,14 @@ p, {
   display: flex;
   justify-content: center;
 }
- .admin-card, .client-card {
+ .admin-card, .client-card,
+ .services {
    margin: 10px;
-   background: rgb(66,66,66);
+   background: rgba(66, 66, 66, 0.86);
  }
+.mdl-card__supporting-text {
+  color: white;
+}
 
  // Login Page Styles
 
@@ -162,7 +167,7 @@ p, {
 // Professional Page Styles
 
 .gravatar-image {
-  border: 5px solid #3fe5fb;
+  border: 5px solid #36aab9;
   border-radius: 50%;
   margin: 4px;
 }
