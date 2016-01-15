@@ -11,11 +11,7 @@ export default Ember.Route.extend({
 
   actions: {
     createAppointment(formValues) {
-      let appointment = this.store.createRecord('appointment-item', formValues);
-
-      appointment.save().then(() => {
-        this.transitionTo('professionals.services.booking');
-      });
+      this.transitionTo('professionals.services.booking', formValues.service.id);
     },
   },
 });
