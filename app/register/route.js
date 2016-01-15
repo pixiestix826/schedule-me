@@ -5,7 +5,7 @@ export default Ember.Route.extend({
   actions: {
     registerUser(formValues) {
       let {email, password} = formValues;
-      let userData = Ember.getProperties(formValues, ['firstName', 'lastName', 'address']);
+      let userData = Ember.getProperties(formValues, ['firstName', 'lastName', 'phone', 'specialty']);
       userData.roles = ['admin'];
 
       this.get('session').authenticate('authenticator:register', email, password, userData).catch((reason) => {});
