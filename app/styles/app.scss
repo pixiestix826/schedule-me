@@ -68,7 +68,7 @@ h3, h4, .as-calendar-header h1,
 }
 
 p, h3, h4, .as-calendar-header h1,
-.tag-line__header {
+.tag-line__header, {
   color: rgb(66,66,66);
   font-weight: bold;
   text-align: center;
@@ -118,6 +118,17 @@ p, h3, h4, .as-calendar-header h1,
 .mdl-card__supporting-text {
   color: white;
   font-size: 14px;
+}
+
+td, th {
+  color: black;
+  padding: 5px;
+  width: 100%;
+  text-align: center;
+}
+
+td {
+  border: 1px solid black;
 }
 
  // Login Page Styles
@@ -196,6 +207,10 @@ p, h3, h4, .as-calendar-header h1,
 
 .professionals-list-header {
   text-align: center;
+}
+
+.professional-booking-calendar {
+  margin-bottom: 20px;
 }
 
 // // .background-image {
