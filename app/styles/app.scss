@@ -121,16 +121,30 @@ p, h3, h4, .as-calendar-header h1,
 }
 
 td, th {
-  color: black;
-  padding: 5px;
-  width: 100%;
+  color: rgba(66, 66, 66, 0.86);
+  padding: 10px;
+
   text-align: center;
 }
 
 td {
-  border: 1px solid black;
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
 }
 
+td:nth-child(odd) {
+  background-color: rgba(66, 66, 66, 0.2);
+}
+td:last-of-type {
+  border-right: 1px solid rgba(66, 66, 66, 0.5);
+}
+td:first-of-type {
+  border-left: 1px solid rgba(66, 66, 66, 0.5);
+  border-top: 1px solid rgba(66, 66, 66, 0.5);
+}
+.prof-cal-text {
+  margin: auto;
+  width: 100%;
+}
  // Login Page Styles
 
  .login-page__form, .user-profile-form,
