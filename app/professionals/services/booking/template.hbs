@@ -1,9 +1,9 @@
 {{#simple-form onsubmit="createAppointment" as |formValues|}}
   {{#mdl-card class="professional-booking-calendar" title='Select Appointment Date' }}
-    {{#bind-value-action value=formValues.service as |bindService|}}
+    {{#bind-value-action value=formValues.startTime as |bindService|}}
       <div class="prof-cal-text" class="mdl-card__supporting-text">
         {{#ember-calendar-table class="prof-cal-text" startValue=startDate binding=formValues.startTime as |startTime endTime|}}
-          {{#mdl-radio class="appointment-service-selector" action=bindService value=appointmentItem text='' name='abc' }}
+          {{#mdl-radio class="appointment-service-selector" action=bindService value=startTime text='' name='abc' }}
             {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
           {{/mdl-radio}}
         {{/ember-calendar-table}}

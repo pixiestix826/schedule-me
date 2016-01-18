@@ -32,7 +32,7 @@ Router.map(function() {
   });
 
   this.route('professionals', function() {
-    this.route('services', {path: '/:professional-id'}, function() {
+    this.route('services', {path: '/:professional_id'}, function() {
       this.route('booking', {path: '/:service-item-id'});
     });
   });
