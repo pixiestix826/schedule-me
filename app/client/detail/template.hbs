@@ -11,7 +11,7 @@
     <ul class="client-history">
       {{#each model.history as |clientHistory|}}
       <li class="history-list-item">
-        <span class="history-list-item__date">{{clientHistory.service.date}} -</span>
+        <span class="history-list-item__date">{{moment-format clientHistory.startTime "YYYY"}} -</span>
         <span class="history-list-item__service">{{clientHistory.service.service}} -</span>
         <span class="history-list-item__price">${{clientHistory.service.price}}</span>
       </li>
