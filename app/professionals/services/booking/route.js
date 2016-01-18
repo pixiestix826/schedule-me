@@ -7,16 +7,6 @@ export default Ember.Route.extend({
 
   _appointments: [],
 
-  actions: {
-    createAppointment(formValues) {
-      let appointment = this.store.createRecord('appointment-item', formValues);
-
-      appointment.save().then(() => {
-        this.transitionTo('client.detail');
-      });
-    },
-  },
-
   didReceiveAttrs() {
     let appointments = this.get('appointments');
 
@@ -42,5 +32,23 @@ export default Ember.Route.extend({
     console.log(createAppointment);
 
     this.set('createAppointment', createAppointment);
+  },
+
+  actions: {
+    createAppointment(formValues) {
+      let appointment = this.store.createRecord('appointment-item', formValues);
+
+      appointment.save().then(() => {
+        this.renderCalendar();
+      });
+    },
+
+    createHistory(formValues) {
+      let history = this.store.createRecord('history-list-item', formValues);
+
+      history.save().then(() => {
+        this.transitionTo('client.detail');
+      });
+    },
   },
 });
