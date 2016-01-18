@@ -8,6 +8,7 @@ export default Ember.Component.extend({
   actions: {
     save(formValues) {
       let user = this.get('profile');
+      debugger;
 
       user.setProperties(formValues);
       user.save();

@@ -24,7 +24,9 @@ export default Ember.Component.extend({
       let eventEnd = moment(eventStart);
       eventEnd.add(eventLength, 'minute');
 
-      return isInBlock(startTime, endTime, eventStart) || isInBlock(startTime, endTime, eventEnd);
+      return isInBlock(startTime, endTime, eventStart) ||
+        isInBlock(startTime, endTime, eventEnd) ||
+        isInBlock(eventStart, eventEnd, startTime);
     });
 
     this.set('conflict', conflict);

@@ -6,7 +6,7 @@
           {{#ember-calendar-table class="prof-cal-text" startValue=startDate binding=formValues.startTime as |startTime endTime|}}
             {{#appointment-calendar-cell startTime=startTime endTime=endTime events=model.events}}
               {{#mdl-radio class="appointment-service-selector" action=bindService value=startTime text='' name='abc' }}
-                {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
+                {{!-- {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}} --}}
               {{/mdl-radio}}
             {{/appointment-calendar-cell}}
           {{/ember-calendar-table}}
