@@ -29,6 +29,7 @@
   },
   "resolutions": {
     "ember": "^2.2.0",
-    "ember-data": "^2.2.0"
+    "ember-data": "^2.2.0",
+    "moment": "~2.11.1"
   }
 }

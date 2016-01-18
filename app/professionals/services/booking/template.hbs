@@ -1,19 +1,24 @@
-{{#simple-form onsubmit="createAppointment" as |formValues|}}
-  {{#mdl-card class="professional-booking-calendar" title='Select Appointment Date' }}
-    {{#bind-value-action value=formValues.startTime as |bindService|}}
-      <div class="prof-cal-text" class="mdl-card__supporting-text">
-        {{#ember-calendar-table class="prof-cal-text" startValue=startDate binding=formValues.startTime as |startTime endTime|}}
-          {{#mdl-radio class="appointment-service-selector" action=bindService value=startTime text='' name='abc' }}
-            {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
-          {{/mdl-radio}}
-        {{/ember-calendar-table}}
-      </div>
-    {{/bind-value-action}}
-    {{#mdl-card-actions}}
-      {{mdl-button text='Book This Appointment'}}
-    {{/mdl-card-actions}}
-  {{/mdl-card}}
-{{/simple-form}}
-
+{{#if model.events.isLoaded}}
+  {{#simple-form onsubmit="createAppointment" as |formValues|}}
+    {{#mdl-card class="professional-booking-calendar" title='Select Appointment Date' }}
+      {{#bind-value-action value=formValues.startTime as |bindService|}}
+        <div class="prof-cal-text" class="mdl-card__supporting-text">
+          {{#ember-calendar-table class="prof-cal-text" startValue=startDate binding=formValues.startTime as |startTime endTime|}}
+            {{#appointment-calendar-cell startTime=startTime endTime=endTime events=model.events}}
+              {{#mdl-radio class="appointment-service-selector" action=bindService value=startTime text='' name='abc' }}
+                {{moment-format startTime "h:mm"}} - {{moment-format endTime "h:mm"}}
+              {{/mdl-radio}}
+            {{/appointment-calendar-cell}}
+          {{/ember-calendar-table}}
+        </div>
+      {{/bind-value-action}}
+      {{#mdl-card-actions}}
+        {{mdl-button text='Book This Appointment'}}
+      {{/mdl-card-actions}}
+    {{/mdl-card}}
+  {{/simple-form}}
+{{else}}
+  SPINNER!!!
+{{/if}}
 
 {{outlet}}

@@ -7,5 +7,5 @@ export default DS.Model.extend({
   specialty: DS.attr('string'),
   phone: DS.attr('string'),
   isProfessional: DS.attr('boolean', {defaultValue: false}),
-  calendarAppointments: DS.hasMany('appointment-item'),
+  calendarAppointments: DS.hasMany('appointment-item', {inverse: null}),
 });

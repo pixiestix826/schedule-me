@@ -3,11 +3,15 @@ import Ember from 'ember';
 import moment from 'moment';
 
 export default Ember.Route.extend({
+  beforeModel() {
+    return this.modelFor('professionals.services').get('calendarAppointments');
+  },
+
   model(params) {
     let service = this.store.findRecord('service-item', params['service-item-id']);
     let professional = this.modelFor('professionals.services');
 
-    return Ember.RSVP.hash({ service, professional });
+    return Ember.RSVP.hash({ service, professional, events: professional.get('calendarAppointments') });
   },
 
   actions: {
