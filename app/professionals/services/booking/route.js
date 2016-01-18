@@ -54,3 +54,4 @@ export default Ember.Component.extend({
 
     this.set('createAppointment', createAppointment);
   },
+});
