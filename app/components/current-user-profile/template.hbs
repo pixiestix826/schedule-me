@@ -5,6 +5,10 @@
   {{mdl-textfield value=formValues.phone class="client-info__phone"}}
   {{mdl-textfield value=formValues.email class="client-info__email"}}
 
+  {{#if formValues.isAdmin}}
+    {{mdl-textfield label="Specialty" class="client-info__email" value=formValues.specialty}}
+  {{/if}}
+
   {{mdl-button class="save-form-btn" isRaised=true text='Save' isAccent=true}}
 {{/simple-form}}
 </div>

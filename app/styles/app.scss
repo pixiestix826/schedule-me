@@ -110,10 +110,22 @@ p, h3, h4, .as-calendar-header h1,
   display: flex;
   justify-content: center;
 }
- .admin-card, .client-card,
- .services {
+ .admin-card, .client-card {
    margin: 10px;
    background: rgba(66, 66, 66, 0.86);
+ }
+.services {
+  background: rgba(66, 66, 66, 0.86);
+  float: right;
+}
+.admin-page-profile {
+  float: left;
+}
+
+
+ .admin-page-profile, .services {
+  width: 40%;
+  margin: 10px;
  }
 .mdl-card__supporting-text {
   color: white;
@@ -174,7 +186,7 @@ td:first-of-type {
 
 // Admin Detail Page Styles
 
-.services, .appointments,
+.appointments,
 .professional {
   width: 70%;
   margin: auto;
