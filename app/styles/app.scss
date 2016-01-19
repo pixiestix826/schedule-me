@@ -241,6 +241,12 @@ td:first-of-type {
 .professionals-list-item__specialty {
   font-size: 18px;
   text-shadow: 1px 1px 1px #000;
+  text-align: center;
+}
+
+.prof-name {
+  align-items: center;
+  margin: auto;
 }
 
 // // .background-image {
