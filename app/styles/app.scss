@@ -43,7 +43,9 @@
 a, .mdl-card__title-text {
   color: #36aab9;
 }
-
+.invisible-ink {
+  font-size: 0;
+}
 
 li {
   list-style-type: none;
@@ -119,7 +121,7 @@ p, h3, h4, .as-calendar-header h1,
 
 .admin-page-profile {
   margin: 10px;
-  width: 40%;
+  width: 50%;
 }
 
 .mdl-card__supporting-text {
@@ -252,6 +254,7 @@ td:first-of-type {
 .appointment-time-selector {
   vertical-align: middle;
 }
+
 
 // // .background-image {
 // //   content: "";

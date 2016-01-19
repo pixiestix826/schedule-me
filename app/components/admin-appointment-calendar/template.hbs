@@ -1,8 +1,23 @@
-{{as-calendar
+{{#as-calendar
   title="Appointment Book"
   occurrences=occurrences
   defaultTimeZoneQuery="New York|Chicago"
   dayStartingTime="8:00"
   onAddOccurrence=(action "calendarAddOccurrence")
   onUpdateOccurrence=(action "calendarUpdateOccurrence")
-  onRemoveOccurrence=(action "calendarRemoveOccurrence")}}
+  onRemoveOccurrence=(action "calendarRemoveOccurrence") as |occurrence timetable calendar|}}
+    {{#as-calendar/occurrence
+      model=occurrence
+      timeSlotHeight=calendar.timeSlotHeight
+      timeSlotDuration=calendar.timeSlotDuration}}
+      {{#if occurrence.content.model.service}}
+        <h1>
+          {{occurrence.content.model.service.service}} -
+          {{occurrence.content.model.client.firstName}}
+          {{occurrence.content.model.client.lastName}}
+        </h1>
+      {{else}}
+        <h1>{{occurrence.title}}</h1>
+      {{/if}}
+    {{/as-calendar/occurrence}}
+{{/as-calendar}}
