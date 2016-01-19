@@ -113,11 +113,13 @@ p, h3, h4, .as-calendar-header h1,
  .admin-card, .client-card,
  .services {
    margin: 10px;
+   width: 40%;
    background: rgba(66, 66, 66, 0.86);
  }
 
 .admin-page-profile {
   margin: 10px;
+  width: 40%;
 }
 
 .mdl-card__supporting-text {
@@ -233,6 +235,12 @@ td:first-of-type {
 
 .professional-booking-calendar {
   margin-bottom: 20px;
+}
+
+.professionals-list-item__name,
+.professionals-list-item__specialty {
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #000;
 }
 
 // // .background-image {
