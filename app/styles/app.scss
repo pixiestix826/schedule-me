@@ -106,27 +106,20 @@ p, h3, h4, .as-calendar-header h1,
   transform: translate(-50%, -50%);
 }
 
-.card-row {
+.card-row, .admin-card-row {
   display: flex;
   justify-content: center;
 }
- .admin-card, .client-card {
+ .admin-card, .client-card,
+ .services {
    margin: 10px;
    background: rgba(66, 66, 66, 0.86);
  }
-.services {
-  background: rgba(66, 66, 66, 0.86);
-  float: right;
-}
+
 .admin-page-profile {
-  float: left;
+  margin: 10px;
 }
 
-
- .admin-page-profile, .services {
-  width: 40%;
-  margin: 10px;
- }
 .mdl-card__supporting-text {
   color: white;
   font-size: 14px;

@@ -2,30 +2,30 @@
   {{admin-appointment-calendar appointments=model.appointments}}
 </div>
 
-{{#mdl-card class="admin-page-profile" title='My Profile'}}
-  <div>
-    {{current-user-profile}}
-  </div>
-{{/mdl-card}}
+<div class="admin-card-row">
+  {{#mdl-card class="admin-page-profile" title='My Profile' }}
+      {{current-user-profile}}
+  {{/mdl-card}}
 
-{{#mdl-card class="services" title='Services'}}
-  <div class="mdl-card__supporting-text">
-    <ul class="services-list">
-      {{#each model.services as |serviceItem|}}
-      <li class="services-list-item">
-        <span class="services-list-item__category">{{serviceItem.category}} -</span>
-        <span class="services-list-item__name">{{serviceItem.service}} -</span>
-        <span class="services-list-item__description">{{serviceItem.description}} -</span>
-        <span class="services-list-item__price">${{serviceItem.price}} -</span>
-        <span class="services-list-item__time">{{serviceItem.time}}</span>
-      {{#link-to "admin.service-items.edit" serviceItem class="services-list-item__edit"}}Edit{{/link-to}}
-      </li>
-      {{/each}}
-    </ul>
-  </div>
-{{#link-to "admin.service-items.new" class="new-btn"}}
-  {{#mdl-card-actions}}
-    {{mdl-button text='Add New Service'}}
-  {{/mdl-card-actions}}
-{{/link-to}}
-{{/mdl-card}}
+  {{#mdl-card class="services" title='Services' }}
+    <div class="mdl-card__supporting-text">
+      <ul class="services-list">
+        {{#each model.services as |serviceItem|}}
+          <li class="services-list-item">
+            <span class="services-list-item__category">{{serviceItem.category}} -</span>
+            <span class="services-list-item__name">{{serviceItem.service}} -</span>
+            <span class="services-list-item__description">{{serviceItem.description}} -</span>
+            <span class="services-list-item__price">${{serviceItem.price}} -</span>
+            <span class="services-list-item__time">{{serviceItem.time}}</span>
+            {{#link-to "admin.service-items.edit" serviceItem class="services-list-item__edit" }}Edit{{/link-to}}
+          </li>
+        {{/each}}
+      </ul>
+    </div>
+    {{#link-to "admin.service-items.new" class="new-btn" }}
+      {{#mdl-card-actions}}
+        {{mdl-button text='Add New Service'}}
+      {{/mdl-card-actions}}
+    {{/link-to}}
+  {{/mdl-card}}
+</div>
