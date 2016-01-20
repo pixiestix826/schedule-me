@@ -1,7 +1,6 @@
 <div class="professional-service-page">
-  {{#simple-form onsubmit="createAppointment" as |formValues|}}
-    {{#mdl-card class="services" title='Select a Service' }}
-      <div class="mdl-card__supporting-text">
+  {{#simple-form class="services" onsubmit="createAppointment" as |formValues|}}
+    {{#mdl-card class="services-list" title='Select a Service' }}
         <ul class="services-list">
           {{#bind-value-action value=formValues.service as |bindService|}}
             {{#each model.services as |serviceItem|}}
@@ -15,7 +14,6 @@
             {{/each}}
           {{/bind-value-action}}
         </ul>
-      </div>
       {{#mdl-card-actions}}
         {{mdl-button text='Book Service'}}
       {{/mdl-card-actions}}
@@ -24,12 +22,12 @@
 
   {{#mdl-card class="professional-bio" title='Meet'}}
   <div class="mdl-card__supporting-text">
-    <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=professional.email}}</span>
     <div class="prof-name">
-      <span class="professionals-list-item__name">{{professional.firstName}}</span>
-      <span class="professionals-list-item__name">{{professional.lastName}} <br /></span>
-      <span class="professionals-list-item__specialty">{{professional.specialty}}</span>
+      <span class="professionals-list-item__name">{{model.professional.firstName}}</span>
+      <span class="professionals-list-item__name">{{model.professional.lastName}} <br /></span>
+      <span class="professionals-list-item__specialty">{{model.professional.specialty}}</span>
     </div>
+    <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=model.professional.email}}</span>
   </div>
 {{/mdl-card}}
 </div>
