@@ -12,7 +12,7 @@
 .appointment-table,
 .professional-booking-calendar {
   overflow: hidden;
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
   border: 8px solid rgba(66, 66, 66, 0.86);
@@ -51,6 +51,7 @@ li {
   list-style-type: none;
   margin-left: 20px;
   line-height: 15px;
+  padding: 4px;
 }
 
 body {
@@ -119,12 +120,13 @@ p, h3, h4, .as-calendar-header h1,
   transform: translate(-50%, -50%);
 }
 
-.card-row, .admin-card-row {
+.card-row, .admin-card-row,
+.professional-service-page {
   display: flex;
   justify-content: center;
 }
  .admin-card, .client-card,
- .services {
+ .services, .professional-bio {
    margin: 10px;
    width: 40%;
    background: rgba(66, 66, 66, 0.86);
@@ -171,16 +173,17 @@ td:first-of-type {
  .register-form, .new-service__form {
     display: flex;
     justify-content: center;
-
  }
- .register-card, .new-service-card {
+ .register-card, .new-service-card,
+ .edit-service {
    width: 60%;
    margin: auto;
    margin-top: 10px;
    margin-bottom: 10px;
  }
  .submit-btn, .add-service__btn,
- .register-submit-btn, .save-form-btn {
+ .register-submit-btn, .save-form-btn,
+ .delete-service__btn, .save-service__btn {
    float: right;
    margin: 5px;
  }
@@ -197,6 +200,10 @@ td:first-of-type {
   margin: auto;
   margin-top: 20px;
   margin-bottom: 20px;
+}
+
+.edit-service-form {
+  margin: auto;
 }
 
 // Client Detail Page Styles

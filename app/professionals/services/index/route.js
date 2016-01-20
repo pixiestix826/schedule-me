@@ -6,6 +6,7 @@ export default Ember.Route.extend({
   model() {
     return Ember.RSVP.hash({
       services: this.store.findAll('service-item'),
+      // professional: this.store.findRecord('professional'),
     });
   },
 

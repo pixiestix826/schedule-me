@@ -1,4 +1,4 @@
-<div class="background-image">
+<div class="professional-service-page">
   {{#simple-form onsubmit="createAppointment" as |formValues|}}
     {{#mdl-card class="services" title='Select a Service' }}
       <div class="mdl-card__supporting-text">
@@ -21,4 +21,15 @@
       {{/mdl-card-actions}}
     {{/mdl-card}}
   {{/simple-form}}
+
+  {{#mdl-card class="professional-bio" title='Meet'}}
+  <div class="mdl-card__supporting-text">
+    <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=professional.email}}</span>
+    <div class="prof-name">
+      <span class="professionals-list-item__name">{{professional.firstName}}</span>
+      <span class="professionals-list-item__name">{{professional.lastName}} <br /></span>
+      <span class="professionals-list-item__specialty">{{professional.specialty}}</span>
+    </div>
+  </div>
+{{/mdl-card}}
 </div>
