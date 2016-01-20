@@ -2,6 +2,7 @@
 @import 'addons/ember-calendar/main';
 @import "yoga";
 @import 'material-design-lite';
+@import "filters";
 
 .occurrences {
   h1 {
@@ -23,14 +24,17 @@
   }
 }
 .mdl-layout__header,
-.mdl-layout__drawer-button {
+.mdl-layout__drawer-button,
+.material-icons {
   background: #36aab9;
-
+  box-shadow: none;
+  color: rgb(91, 87, 87);
   background-image:
     linear-gradient(
       to bottom,
       #36aab9, white
     );
+    @extend %gingham;
 }
 
 .mdl-button.mdl-button--colored {
@@ -77,7 +81,6 @@ table {
 h3, h4, .as-calendar-header h1,
 .mdl-layout-title {
   font-weight: bold;
-  // font-family: 'Londrina Shadow', cursive;
   font-family: 'Galindo', cursive;
 }
 
@@ -86,6 +89,11 @@ p, h3, h4, .as-calendar-header h1,
   color: rgb(66,66,66);
   font-weight: bold;
   text-align: center;
+}
+.mdl-layout__header-row,
+.mdl-layout-title, .mdl-layout__header
+.mdl-navigation__link, {
+  color: rgb(66,66,66);
 }
 
 .login-card {
@@ -97,9 +105,11 @@ p, h3, h4, .as-calendar-header h1,
 .image-row {
   content: "";
   background: url('/images/NEW-PIC.jpg') repeat-x center;
-  height: 20rem;
+  height: 12rem;
   background-size: contain;
   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+
+  @extend %gingham;
 }
 
 .tag-line__header,
