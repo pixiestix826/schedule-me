@@ -87,6 +87,11 @@ p, h3, h4, .as-calendar-header h1,
   font-weight: bold;
   text-align: center;
 }
+
+.login-card {
+  width: 100%;
+  background: rgba(66, 66, 66, 0.86);
+}
 //Index page styles
 
 .image-row {
@@ -105,9 +110,10 @@ p, h3, h4, .as-calendar-header h1,
 
 .mdl-textfield {
   display: block;
-  background: white;
   margin: 5px;
   border-radius: 2px;
+  color: white;
+  background-color: rgba(66, 66, 66, 0.2);
 }
 
 .appointment-btn {
@@ -132,9 +138,20 @@ p, h3, h4, .as-calendar-header h1,
    background: rgba(66, 66, 66, 0.86);
  }
 
+ .services-list {
+   width: 100%;
+   color: white;
+   background-color: rgba(66, 66, 66, 0.86);
+ }
+
+ .professional-img {
+   float: right;
+ }
+
 .admin-page-profile {
   margin: 10px;
   width: 50%;
+  background: rgba(66, 66, 66, 0.86);
 }
 
 .mdl-card__supporting-text {
@@ -180,6 +197,7 @@ td:first-of-type {
    margin: auto;
    margin-top: 10px;
    margin-bottom: 10px;
+   background: rgba(66, 66, 66, 0.86);
  }
  .submit-btn, .add-service__btn,
  .register-submit-btn, .save-form-btn,
@@ -215,6 +233,12 @@ td:first-of-type {
 .client-page-profile, .client-page-history {
   margin: 10px;
   width: 50%;
+  background-color: rgba(66, 66, 66, 0.86);
+}
+
+.client-page-history {
+  background-color: rgba(66, 66, 66, 0.86);
+  color: white;
 }
 
 

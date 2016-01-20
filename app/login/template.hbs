@@ -6,10 +6,12 @@
 
 <div class="login-page__form">
 {{#simple-form onsubmit="loginUser" as |formValues|}}
+{{#mdl-card class="login-card"}}
   {{mdl-textfield value=formValues.username label="Email"}}
   {{mdl-textfield value=formValues.password type="password" label="Password"}}
 
   {{mdl-button class="submit-btn" isRaised=true text='Login' isAccent=true}}
+{{/mdl-card}}
 {{/simple-form}}
 </div>
 <p class="login-page__register">

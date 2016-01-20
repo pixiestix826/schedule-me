@@ -20,14 +20,16 @@
     {{/mdl-card}}
   {{/simple-form}}
 
-  {{#mdl-card class="professional-bio" title='Meet'}}
+  {{#mdl-card class="professional-bio" title='Your Professional'}}
   <div class="mdl-card__supporting-text">
     <div class="prof-name">
       <span class="professionals-list-item__name">{{model.professional.firstName}}</span>
       <span class="professionals-list-item__name">{{model.professional.lastName}} <br /></span>
       <span class="professionals-list-item__specialty">{{model.professional.specialty}}</span>
     </div>
-    <span class="professionals-list-item__img">{{gravatar-image class="gravatar-image" email=model.professional.email}}</span>
+    <div class="professional-img">
+    <span class="professionals-service-item__img">{{gravatar-image class="gravatar-image" email=model.professional.email}}</span>
+    </div>
   </div>
 {{/mdl-card}}
 </div>
