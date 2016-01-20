@@ -61,6 +61,17 @@ body {
     );
 }
 
+table {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width:460px) {
+  table {
+    font-size: 12px;
+  }
+}
+
 .mdl-card__title-text, h2,
 h3, h4, .as-calendar-header h1,
 .mdl-layout-title {
@@ -137,7 +148,7 @@ td, th {
 
 tr:nth-child(odd), th:nth-child(odd) {
   border-top: 1px solid rgba(66, 66, 66, 0.5);
-  background-color: rgba(66, 66, 66, 0.2);
+  background-color: rgba(66, 66, 66, 0.1);
 }
 
 td {
@@ -145,7 +156,7 @@ td {
 }
 
 td:nth-child(odd) {
-  background-color: rgba(66, 66, 66, 0.2);
+  background-color: rgba(66, 66, 66, 0.1);
 }
 td:last-of-type {
   border-right: 1px solid rgba(66, 66, 66, 0.5);
@@ -153,10 +164,7 @@ td:last-of-type {
 td:first-of-type {
   border-left: 1px solid rgba(66, 66, 66, 0.5);
 }
-.prof-cal-text {
-  margin: auto;
-  width: 100%;
-}
+
  // Login Page Styles
 
  .login-page__form, .user-profile-form,
