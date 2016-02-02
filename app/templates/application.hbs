@@ -1,3 +1,35 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+{{#mdl-nav class="nav-bar" title='Schedule Me' fixedHeader=true}}
+  {{mdl-nav-item name='Home' route='index'}}
+  {{mdl-nav-item name='Register'   route='register'}}
+  {{mdl-nav-item name='Login'      route='login'}}
+  {{mdl-nav-item name='Logout' route='logout'}}
+<div class="image-row"></div>
+  {{outlet}}
+{{#mdl-mini-footer title='Schedule Me'}}
+  {{#mdl-footer-linklist}}
+    {{#link-to 'index' tagName='li'}}
+      Home
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+      Privacy
+    {{/link-to}}
+  {{/mdl-footer-linklist}}
+  {{#mdl-footer-linklist class="social-media-icons"}}
+    {{#link-to 'index' tagName='li'}}
+    <i class="fa fa-github-square"></i>
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+    <i class="fa fa-twitter-square"></i>
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+    <i class="fa fa-linkedin-square"></i>
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+      <i class="fa fa-facebook-official"></i>
+    {{/link-to}}
+    {{#link-to 'index' tagName='li'}}
+    <i class="fa fa-instagram"></i>
+    {{/link-to}}
+  {{/mdl-footer-linklist}}
+{{/mdl-mini-footer}}
+{{/mdl-nav}}

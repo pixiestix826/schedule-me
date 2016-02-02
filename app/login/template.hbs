@@ -1,0 +1,19 @@
+<h2 class="tag-line__header">Scheduling Made Easy</h2>
+<p class="description-p">
+  Schedule Me offers a way for clients to connect with freelancers and independent
+  contractors providing an array of services.
+</p>
+
+<div class="login-page__form">
+{{#simple-form onsubmit="loginUser" as |formValues|}}
+{{#mdl-card class="login-card"}}
+  {{mdl-textfield value=formValues.username label="Email"}}
+  {{mdl-textfield value=formValues.password type="password" label="Password"}}
+
+  {{mdl-button class="submit-btn" isRaised=true text='Login' isAccent=true}}
+{{/mdl-card}}
+{{/simple-form}}
+</div>
+<p class="login-page__register">
+  Don't have an account? <a href="register">Sign Up</a>
+</p>

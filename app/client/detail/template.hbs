@@ -1,0 +1,27 @@
+<div class="card-row">
+
+{{#mdl-card class="client-page-profile" title='My Profile'}}
+<div>
+  {{current-user-profile}}
+</div>
+{{/mdl-card}}
+
+{{#mdl-card class="client-page-history" title='Order History'}}
+<div>
+    <ul class="client-history">
+      {{#each model.history as |clientHistory|}}
+      <li class="history-list-item">
+        <span class="history-list-item__date">{{moment-format clientHistory.startTime "MMM DD YYYY"}} -</span>
+        <span class="history-list-item__service">{{clientHistory.service.service}} -</span>
+        <span class="history-list-item__price">${{clientHistory.service.price}} -</span>
+        <span class="history-list-item__professional">{{clientHistory.professional.firstName}}</span>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
+{{/mdl-card}}
+</div>
+
+{{#link-to "professionals"}}
+  {{mdl-button class="appointment-btn" isRaised=true text='Make An Appointment' isAccent=true}}
+{{/link-to}}

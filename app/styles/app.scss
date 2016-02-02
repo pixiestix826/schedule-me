@@ -1,0 +1,315 @@
+@import '../../bower_components/paint/paint';
+@import 'addons/ember-calendar/main';
+@import "yoga";
+@import 'material-design-lite';
+@import "filters";
+
+.occurrences {
+  h1 {
+    margin: 0;
+  }
+}
+
+.appointment-table,
+.professional-booking-calendar {
+  overflow: hidden;
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  border: 8px solid rgba(66, 66, 66, 0.86);
+
+  li {
+    margin-left: 0;
+    line-height: inherit;
+  }
+}
+.mdl-layout__header,
+.mdl-layout__drawer-button,
+.material-icons {
+  background: #36aab9;
+  box-shadow: none;
+  color: rgb(91, 87, 87);
+  background-image:
+    linear-gradient(
+      to bottom,
+      #36aab9, white
+    );
+    @extend %gingham;
+}
+
+.mdl-button.mdl-button--colored {
+  color: rgba(#cbb520, 0.84);
+}
+
+.mdl-button--accent.mdl-button--accent.mdl-button--raised {
+  background: #36aab9;
+}
+a, .mdl-card__title-text {
+  color: #36aab9;
+}
+.invisible-ink {
+  font-size: 0;
+}
+
+li {
+  list-style-type: none;
+  margin-left: 20px;
+  line-height: 15px;
+  padding: 4px;
+}
+
+body {
+  background-image:
+    linear-gradient(
+      to bottom,
+      #79797d, white
+    );
+}
+
+table {
+  width: 100%;
+  margin: auto;
+}
+
+@media (min-width:460px) {
+  table {
+    font-size: 12px;
+  }
+}
+
+.mdl-card__title-text, h2,
+h3, h4, .as-calendar-header h1,
+.mdl-layout-title {
+  font-weight: bold;
+  font-family: 'Galindo', cursive;
+}
+
+p, h3, h4, .as-calendar-header h1,
+.tag-line__header, {
+  color: rgb(66,66,66);
+  font-weight: bold;
+  text-align: center;
+}
+.mdl-layout__header-row,
+.mdl-layout-title, .mdl-layout__header
+.mdl-navigation__link, {
+  color: rgb(66,66,66);
+}
+
+.login-card {
+  width: 100%;
+  background: rgba(66, 66, 66, 0.86);
+}
+//Index page styles
+
+.image-row {
+  content: "";
+  background: url('/images/NEW-PIC.jpg') repeat-x center;
+  height: 12rem;
+  background-size: contain;
+  box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+
+  @extend %gingham;
+}
+
+.tag-line__header,
+.description-p,
+.login-page__register {
+  text-align: center;
+}
+
+.mdl-textfield {
+  display: block;
+  margin: 5px;
+  border-radius: 2px;
+  color: white;
+  background-color: rgba(66, 66, 66, 0.2);
+}
+
+.appointment-btn {
+  display: block;
+  margin-top: 3rem;
+  width: 50%;
+  height: 4rem;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.card-row, .admin-card-row,
+.professional-service-page {
+  display: flex;
+  justify-content: center;
+}
+ .admin-card, .client-card,
+ .services, .professional-bio {
+   margin: 10px;
+   width: 40%;
+   background: rgba(66, 66, 66, 0.86);
+ }
+
+ .services-list {
+   width: 100%;
+   color: white;
+   background-color: rgba(66, 66, 66, 0.1);
+ }
+
+ .professional-img {
+   float: right;
+ }
+
+.admin-page-profile {
+  margin: 10px;
+  width: 50%;
+  background: rgba(66, 66, 66, 0.86);
+}
+
+.mdl-card__supporting-text {
+  color: white;
+  font-size: 14px;
+}
+
+td, th {
+  color: rgba(66, 66, 66, 0.86);
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(odd), th:nth-child(odd) {
+  border-top: 1px solid rgba(66, 66, 66, 0.5);
+  background-color: rgba(66, 66, 66, 0.1);
+}
+
+td {
+  border-bottom: 1px solid rgba(66, 66, 66, 0.5);
+}
+
+td:nth-child(odd) {
+  background-color: rgba(66, 66, 66, 0.1);
+}
+td:last-of-type {
+  border-right: 1px solid rgba(66, 66, 66, 0.5);
+}
+td:first-of-type {
+  border-left: 1px solid rgba(66, 66, 66, 0.5);
+}
+
+ // Login Page Styles
+
+ .login-page__form, .user-profile-form,
+ .register-form, .new-service__form {
+    display: flex;
+    justify-content: center;
+ }
+ .register-card, .new-service-card,
+ .edit-service {
+   width: 60%;
+   margin: auto;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   background: rgba(66, 66, 66, 0.86);
+ }
+ .submit-btn, .add-service__btn,
+ .register-submit-btn, .save-form-btn,
+ .delete-service__btn, .save-service__btn {
+   float: right;
+   margin: 5px;
+ }
+ .register-radio-btn {
+   float: left;
+   margin: 3px;
+ }
+
+// Admin Detail Page Styles
+
+.appointments,
+.professional {
+  width: 70%;
+  margin: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.edit-service-form {
+  margin: auto;
+}
+
+// Client Detail Page Styles
+
+.client-page-headers {
+  text-align: center;
+}
+
+.client-page-profile, .client-page-history {
+  margin: 10px;
+  width: 50%;
+  background-color: rgba(66, 66, 66, 0.86);
+}
+
+.client-page-history {
+  background-color: rgba(66, 66, 66, 0.86);
+  color: white;
+}
+
+
+// Appointment Page Styles
+
+.appointment-service-selector {
+  margin-right: 10px;
+}
+
+// Footer Styles
+
+.social-media-icons {
+  margin-top: 15px;
+}
+
+// Professional Page Styles
+
+.gravatar-image {
+  border: 5px solid #36aab9;
+  border-radius: 50%;
+  margin: 4px;
+}
+
+.professionals-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 10px 0;
+}
+
+.professionals-list-header {
+  text-align: center;
+}
+
+.professional-booking-calendar {
+  margin-bottom: 20px;
+}
+
+.professionals-list-item__name,
+.professionals-list-item__specialty {
+  font-size: 18px;
+  text-shadow: 1px 1px 1px #000;
+  text-align: center;
+}
+
+.prof-name {
+  align-items: center;
+  margin: auto;
+}
+
+.appointment-time-selector {
+  vertical-align: middle;
+}
+
+
+// // .background-image {
+// //   content: "";
+// //   opacity: 0.6;
+// //   background: url('/images/clock2.jpg') no-repeat center center;
+// //   height: 40rem;
+// //   background-size: cover;
+// //   box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+// }
