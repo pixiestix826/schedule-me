@@ -8,6 +8,6 @@ export default DS.Model.extend(IAm, {
   specialty: DS.attr(),
   phone: DS.attr(),
   roles: DS.attr(),
-  clientAppointments: DS.hasMany('appointment-item', { inverse: 'client' }),
+  clientAppointments: DS.hasMany('appointment-item', { inverse: null }),
   calendarAppointments: DS.hasMany('appointment-item', { inverse: null }),
 });
