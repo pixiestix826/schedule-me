@@ -11,6 +11,7 @@ export default Ember.Route.extend({
     return Ember.RSVP.hash({
       services: this.store.findAll('service-item'),
       appointments: this.get('currentUser.user.calendarAppointments'),
+      profile: this.get('currentUser.user'),
     });
   },
 });

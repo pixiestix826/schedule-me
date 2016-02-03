@@ -7,13 +7,13 @@ export default Ember.Component.extend({
   _appointments: [],
 
   didReceiveAttrs() {
-    let appointments = this.get('appointments');
-
-    this.set('_appointments', appointments.toArray());
     this.renderCalendar();
   },
 
   renderCalendar() {
+    let appointmentsRelations = this.get('appointments');
+    this.set('_appointments', appointmentsRelations.toArray());
+
     let appointments = this.get('_appointments');
 
     let occurrences = appointments.map(function(appointment) {
@@ -28,8 +28,6 @@ export default Ember.Component.extend({
       };
     });
 
-    console.log(occurrences);
-
     this.set('occurrences', occurrences);
   },
 
@@ -37,11 +35,19 @@ export default Ember.Component.extend({
     calendarAddOccurrence: function({startsAt, endsAt}) {
       let startTime = moment(startsAt);
       let title = window.prompt(`What's the title of your break?`, `Break Time`);
+      let profile = this.get('profile');
+
+      if (!title) { return };
+
       let length = window.prompt(`How much time would you like to reserve`, 60);
+
+      if (!length) { return };
+
       let adminBreak = this.get('store').createRecord('appointment-item', {
         title,
         startTime,
         length,
+        profile,
       });
 
       adminBreak.save().then(() => {

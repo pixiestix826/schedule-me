@@ -9,7 +9,9 @@
     {{#as-calendar/occurrence
       model=occurrence
       timeSlotHeight=calendar.timeSlotHeight
-      timeSlotDuration=calendar.timeSlotDuration}}
+      timeSlotDuration=calendar.timeSlotDuration
+      class="as-calendar-timetable-occurrence"
+    }}
       {{#if occurrence.content.model.service}}
         <h1>
           {{occurrence.content.model.service.service}} -
@@ -17,7 +19,8 @@
           {{occurrence.content.model.client.lastName}}
         </h1>
       {{else}}
-        <h1>{{occurrence.title}}</h1>
+        <h1>{{occurrence.content.model.title}}</h1>
       {{/if}}
+      <a class="remove" onclick={{action "calendarRemoveOccurrence" occurrence.content}}></a>
     {{/as-calendar/occurrence}}
 {{/as-calendar}}
